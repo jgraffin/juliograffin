@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "jetbrains_monothin";
+  src: url("../fonts/jetbrainsmono-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jetbrains_mono_nlbold";
+  src: url("../fonts/jetbrainsmononl-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jetbrains_mono_nlextrabold";
+  src: url("../fonts/jetbrainsmononl-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jetbrains_mono_nlXBdIt";
+  src: url("../fonts/jetbrainsmononl-extrabolditalic-webfont.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jetbrains_mono_nlextralight";
+  src: url("../fonts/jetbrainsmononl-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "jetbrains_mono_nlmedium";
+  src: url("../fonts/jetbrainsmononl-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "jetbrains_monothin";
+}

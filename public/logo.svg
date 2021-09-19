@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="169px" height="27px" viewBox="0 0 169 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>&lt;jGraffin/&gt;</title>
+    <g id="HOME" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="JetBrainsMonoNL-ExtraBold, JetBrains Mono NL" font-size="26" font-weight="700">
+        <g id="Desktop-HD" transform="translate(-166.000000, -34.000000)">
+            <g id="header" transform="translate(165.000000, 29.000000)">
+                <text id="&lt;jGraffin/&gt;">
+                    <tspan x="0" y="27" fill="#F1C40F">&lt;j</tspan>
+                    <tspan x="31.2" y="27" font-family="JetBrainsMonoNL-ThinItalic, JetBrains Mono NL" font-style="italic" font-weight="300" fill="#FFFFFF">Graffin/&gt;</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
