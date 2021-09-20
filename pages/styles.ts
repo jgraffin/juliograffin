@@ -17,14 +17,22 @@ const scaleDown = keyframes`
         transform: scale(1);
     }
 `;
+
+const scaleIntro = keyframes`
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+`;
+
 export const Section = styled.section`
   &.intro {
+    overflow: hidden;
     position: relative;
     width: 100%;
     height: 90vh;
-    background: url("../../images/background-image.jpeg") no-repeat center
-      center;
-    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,19 +48,29 @@ export const Section = styled.section`
       color: #ffffff;
     }
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
       width: 100%;
       height: 100%;
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 1;
+      z-index: 2;
       background-image: linear-gradient(
         180deg,
         #000000 0%,
         rgba(0, 0, 0, 0.86) 100%
       );
+    }
+
+    &::after {
+      animation: ${scaleIntro} ease-in-out;
+      animation-duration: 0.8s;
+      background: url("../../images/background-image.jpeg") no-repeat center
+        center;
+      background-size: cover;
+      z-index: 1;
     }
 
     > div {
@@ -86,17 +104,6 @@ export const Section = styled.section`
       }
 
       .intro-button--video {
-        cursor: pointer;
-        background: #f1c40f;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 90px;
-        height: 4.2rem;
-        width: 11.3rem;
-        padding: 0.5rem 1.4rem;
-        transition: ease-in-out 0.3s;
-
         &:hover {
           background: #ffffff;
         }
@@ -278,6 +285,31 @@ export const Section = styled.section`
             line-height: 2.6rem;
             margin-bottom: 3rem;
             color: #111111;
+          }
+        }
+
+        .author__actions {
+          .btn--download {
+            font-family: "jetbrains_mono_nlextrabold";
+            width: auto;
+            padding: 0.4rem 2rem;
+            border: 1px solid transparent;
+            transition: none;
+
+            svg {
+              font-size: 2rem;
+              margin-right: 1rem;
+            }
+
+            &:hover {
+              background: #ffffff;
+              color: #f1c40f;
+              border: 1px solid #f1c40f;
+
+              svg {
+                fill: #f1c40f;
+              }
+            }
           }
         }
       }

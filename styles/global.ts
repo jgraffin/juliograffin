@@ -8,14 +8,25 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
+    font-family: "jetbrains_monothin";
   }
 
-  body {
-    color: #111111;
-  }
 
   button {
     background-color: transparent;
+  }
+
+  .btn {
+    cursor: pointer;
+    background: #f1c40f;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+    height: 4.2rem;
+    width: 11.3rem;
+    padding: 0.5rem 1.4rem;
+    transition: ease-in-out 0.3s;
   }
 
   @media (max-width: 720px){

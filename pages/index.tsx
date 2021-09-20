@@ -3,17 +3,26 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { BsPlayFill } from "react-icons/bs";
+import { BsDownload } from "react-icons/bs";
 
 import { Main, Container } from "../styles/global";
 import { Section } from "./styles";
+import { posts } from "../pages/api/posts";
 import Cover from "../public/images/background-image.jpeg";
 import Card from "../components/card";
-import { posts } from "../pages/api/posts";
+import Modal from "../components/modal";
 
 const Home: NextPage = () => {
   const [data, setData] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState("");
+
   return (
     <Main>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+      />
       <Section className="intro">
         <Container>
           <div className="intro__text">
@@ -29,7 +38,7 @@ const Home: NextPage = () => {
             <button className="intro-button intro-button--next">
               <AiOutlineArrowDown />
             </button>
-            <button className="intro-button intro-button--video">
+            <button className="btn intro-button intro-button--video">
               <BsPlayFill />
               <span>0.53</span>
             </button>
@@ -88,6 +97,12 @@ const Home: NextPage = () => {
                 Suspendisse potenti. Donec ante tortor, accumsan in ultrices
                 non, viverra vitae est.
               </p>
+            </div>
+            <div className="author__actions">
+              <button className="btn btn--download">
+                <BsDownload />
+                download CV
+              </button>
             </div>
           </div>
           <span id="curved-corner-bottomleft"></span>
