@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     transition: ease-in-out 0.3s;
   }
 
+
   @media (max-width: 720px){
     html, body {
       font-size: 52.5%;
