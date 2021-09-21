@@ -1,22 +1,23 @@
 import { useState, useEffect, useContext, createContext } from "react";
 
 const HeaderContext = createContext({});
-const switchValue = {
-  pt: {
-    isActive: true,
-  },
-  en: {
-    isActive: false,
-  },
-};
 
 const HeaderProvider = ({ children }: any) => {
-  const [language, setLanguage] = useState("pt-br");
-  const [isActive, setIsActive] = useState(switchValue) as any;
+  const [language, setLanguage] = useState({
+    currentLanguage: getLanguageFromLocalStorage(),
+  });
+  const [isActive, setIsActive] = useState({
+    pt: {
+      isActive: getIsActiveFromLocalStorage(),
+    },
+    en: {
+      isActive: getIsActiveFromLocalStorage(),
+    },
+  });
 
   const switchLanguage = (lang: any) => {
     if (lang === "pt-br") {
-      setLanguage("pt-br");
+      setLanguage({ currentLanguage: "pt-br" });
       setIsActive({
         pt: {
           isActive: true,
@@ -25,8 +26,9 @@ const HeaderProvider = ({ children }: any) => {
           isActive: false,
         },
       });
+      localStorage.getItem("current");
     } else {
-      setLanguage("en-us");
+      setLanguage({ currentLanguage: "en-us" });
       setIsActive({
         pt: {
           isActive: false,
@@ -37,6 +39,29 @@ const HeaderProvider = ({ children }: any) => {
       });
     }
   };
+
+  function getLanguageFromLocalStorage() {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("currentLanguage")
+        ? localStorage.getItem("currentLanguage")
+        : 1;
+    }
+  }
+
+  function getIsActiveFromLocalStorage() {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("currentIsActive")
+        ? localStorage.getItem("currentIsActive")
+        : false;
+    }
+  }
+
+  useEffect(() => {
+    localStorage.setItem("currentLanguage", String(language.currentLanguage));
+    localStorage.setItem("currentIsActive", JSON.stringify(isActive));
+    getLanguageFromLocalStorage();
+    getIsActiveFromLocalStorage();
+  }, [language.currentLanguage, isActive]);
 
   return (
     <HeaderContext.Provider value={{ switchLanguage, language, isActive }}>

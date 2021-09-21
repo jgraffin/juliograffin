@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { NextPage } from "next";
+import fm from "format-message";
 import Image from "next/image";
 import YouTube from "react-youtube";
 import Modal from "react-modal";
@@ -84,13 +85,14 @@ const Home: NextPage = () => {
         <Container>
           <div className="intro__text">
             <h1>
-              Olá!
-              <br />
-              Eu sou o Julio!
+              {language.currentLanguage === "pt-br"
+                ? fm("screen.home.intro.title")
+                : fm("en.screen.home.intro.title")}
             </h1>
             <p>
-              Trabalho como desenvolvedor front-end e busco entregar sempre um
-              bom produto digital. Quer saber mais? Assista o vídeo!
+              {language.currentLanguage === "pt-br"
+                ? fm("screen.home.intro.description")
+                : fm("en.screen.home.intro.description")}
             </p>
 
             <button className="intro-button intro-button--next">
@@ -122,7 +124,7 @@ const Home: NextPage = () => {
             <h2>trabalhos</h2>
           </div>
           <div className="content__jobs__cards">
-            {language === "pt-br"
+            {language.currentLanguage === "pt-br"
               ? postsLangPt.map((item: any) => (
                   <Card
                     key={item.id}

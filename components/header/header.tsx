@@ -8,7 +8,7 @@ import Logo from "../../public/logo.svg";
 import { useHeader } from "../../hooks/useHeader";
 
 const Header: FC = () => {
-  const { switchLanguage, isActive } = useHeader() as any;
+  const { switchLanguage, language, isActive } = useHeader() as any;
   const handleChange = (value: any) => {
     switchLanguage(value.id);
   };
@@ -26,10 +26,14 @@ const Header: FC = () => {
         <Nav>
           <ul>
             <li>
-              <button>Trabalhos</button>
+              <button>
+                {language.currentLanguage === "pt-br" ? "Trabalhos" : "Work"}
+              </button>
             </li>
             <li>
-              <button>Contato</button>
+              <button>
+                {language.currentLanguage === "pt-br" ? "Contato" : "Contact"}
+              </button>
             </li>
           </ul>
         </Nav>
