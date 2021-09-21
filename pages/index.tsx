@@ -9,7 +9,8 @@ import { BsDownload } from "react-icons/bs";
 
 import { Main, Container } from "../styles/global";
 import { Section } from "./styles";
-import { posts } from "../pages/api/posts";
+import { postsLangPt, postsLangEn } from "../pages/api/posts";
+import { useHeader } from "../hooks/useHeader";
 import Cover from "../public/images/background-image.jpeg";
 import Card from "../components/card";
 
@@ -38,6 +39,7 @@ const modalStyles = {
 };
 
 const Home: NextPage = () => {
+  const { language } = useHeader() as any;
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [videoUrl, setVideoUrl] = useState("https://youtu.be/hmHXtyneUYU");
   let videoCode;
@@ -107,9 +109,9 @@ const Home: NextPage = () => {
             <Image
               src={Cover}
               alt="Vídeo apresentação"
-              placeholder="blur"
               width={540}
               height={350}
+              placeholder="blur"
             />
           </div>
         </Container>
@@ -120,23 +122,34 @@ const Home: NextPage = () => {
             <h2>trabalhos</h2>
           </div>
           <div className="content__jobs__cards">
-            {posts.map((item: any) => (
-              <Card
-                key={item.id}
-                url={item.url}
-                tag={item.tag}
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
+            {language === "pt-br"
+              ? postsLangPt.map((item: any) => (
+                  <Card
+                    key={item.id}
+                    url={item.url}
+                    tag={item.tag}
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                  />
+                ))
+              : postsLangEn.map((item: any) => (
+                  <Card
+                    key={item.id}
+                    url={item.url}
+                    tag={item.tag}
+                    image={item.image}
+                    title={item.title}
+                    description={item.description}
+                  />
+                ))}
           </div>
         </div>
         <div className="content__about">
           <div className="content__about__author">
             <div className="author__image">
               <Image
-                src="/julio-graffin.png"
+                src="/julio-graffin.png?download=true"
                 alt="Julio Graffin"
                 width={64}
                 height={64}

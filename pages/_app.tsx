@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import "../styles/fonts.css";
+import AppProvider from "../hooks/appProvider";
 import GlobalStyle from "../styles/global";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
@@ -21,10 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Portfolio contendo trabalhos dos quais participei em várias empresas, com times multi disciplinares. Trabalhos de design, front-end e CMS"
         />
       </Head>
-      <GlobalStyle />
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <AppProvider>
+        <GlobalStyle />
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </AppProvider>
     </>
   );
 }

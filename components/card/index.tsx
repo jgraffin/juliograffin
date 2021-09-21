@@ -19,7 +19,14 @@ const Card = ({ url, title, image, description, tag }: CardProps) => {
           <div>
             <HiPlusSm />
             <span>{tag}</span>
-            <Image src={image} alt={title} width={350} height={190} />
+            <Image
+              src={image}
+              alt={title}
+              width={350}
+              height={190}
+              placeholder="blur"
+              blurDataURL={image}
+            />
           </div>
           <div>
             <h3>{title}</h3>
