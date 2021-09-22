@@ -2,14 +2,20 @@ import formatMessage from "format-message";
 import pt from "./pt-BR/translation.json";
 import en from "./en-US/translation.json";
 
-const english = formatMessage.namespace();
+const eng = formatMessage.namespace();
 
 formatMessage.setup({
-  locale: "pt-BR",
-  translations: require("../locales"),
+  locale: "pt",
+  translations: {
+    pt,
+  },
 });
 
-english.setup({
+eng.setup({
   locale: "en",
-  translations: require("../locales"),
+  translations: {
+    en,
+  },
 });
+
+export { eng };

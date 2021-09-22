@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     scrollbar-width: thin;
     font-family: "jetbrains_monothin";
+    list-style-type: none;
   }
 
 

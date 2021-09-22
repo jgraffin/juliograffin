@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
@@ -14,6 +15,7 @@ import { postsLangPt, postsLangEn } from "../pages/api/posts";
 import { useHeader } from "../hooks/useHeader";
 import Cover from "../public/images/background-image.jpeg";
 import Card from "../components/card";
+import { eng } from "../locales/translate";
 
 type Options = {
   width: string;
@@ -42,7 +44,7 @@ const modalStyles = {
 const Home: NextPage = () => {
   const { language } = useHeader() as any;
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [videoUrl, setVideoUrl] = useState("https://youtu.be/hmHXtyneUYU");
+  const [videoUrl, setVideoUrl] = useState("");
   let videoCode;
   if (videoUrl) {
     videoCode = videoUrl.substring(videoUrl.lastIndexOf("/"));
@@ -59,6 +61,11 @@ const Home: NextPage = () => {
 
   const handleOpenModal = () => {
     setModalIsOpen(true);
+    if (language.currentLanguage === "pt-br") {
+      setVideoUrl(fm("screen.home.video"));
+    } else {
+      setVideoUrl(eng("screen.home.video"));
+    }
   };
 
   const opts: Options = {
@@ -86,15 +93,18 @@ const Home: NextPage = () => {
           <div className="intro__text">
             <h1>
               {language.currentLanguage === "pt-br"
-                ? fm("screen.home.intro.title")
-                : fm("en.screen.home.intro.title")}
+                ? fm.rich(fm("screen.home.intro.title"), {
+                    br: () => <br key="br" />,
+                  })
+                : eng.rich(eng("screen.home.intro.title"), {
+                    br: () => <br key="br" />,
+                  })}
             </h1>
             <p>
               {language.currentLanguage === "pt-br"
                 ? fm("screen.home.intro.description")
-                : fm("en.screen.home.intro.description")}
+                : eng("screen.home.intro.description")}
             </p>
-
             <button className="intro-button intro-button--next">
               <AiOutlineArrowDown />
             </button>
@@ -110,7 +120,11 @@ const Home: NextPage = () => {
             <BsPlayFill className="intro__video__icon" />
             <Image
               src={Cover}
-              alt="Vídeo apresentação"
+              alt={
+                language.currentLanguage === "pt-br"
+                  ? fm("screen.home.videoAlt")
+                  : eng("screen.home.videoAlt")
+              }
               width={540}
               height={350}
               placeholder="blur"
@@ -121,7 +135,15 @@ const Home: NextPage = () => {
       <Section className="content">
         <div className="content__jobs">
           <div className="content__jobs__title">
-            <h2>trabalhos</h2>
+            <h2>
+              {language.currentLanguage === "pt-br"
+                ? fm.rich(fm("title.jobs"), {
+                    br: () => <br key="br" />,
+                  })
+                : eng.rich(eng("title.jobs"), {
+                    br: () => <br key="br" />,
+                  })}
+            </h2>
           </div>
           <div className="content__jobs__cards">
             {language.currentLanguage === "pt-br"

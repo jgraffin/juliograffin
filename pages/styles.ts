@@ -45,6 +45,7 @@ export const Section = styled.section`
 
     p {
       font-size: 1.6rem;
+      line-height: 3rem;
       color: #ffffff;
     }
 

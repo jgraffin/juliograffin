@@ -1,6 +1,9 @@
 {
   "application": "Julio Graffin",
-  "screen.home.intro.title": "Olá! Eu sou o Julio!",
-  "screen.home.intro.description": "Trabalho como desenvolvedor front-end e busco entregar sempre um bom produto digital. Quer saber mais? Assista o vídeo! oaoa",
-  "screen.home.title.jobs": "trabalhos"
+  "screen.home.intro.title": "Olá! <br/>Eu sou o Julio!",
+  "screen.home.intro.description": "Trabalho como desenvolvedor front-end e busco entregar sempre um bom produto digital. Quer saber mais? Assista o vídeo!",
+  "screen.home.video": "https://youtu.be/hmHXtyneUYU",
+  "screen.home.videoAlt": "Vídeo apresentação",
+  "title.jobs": "trabalhos",
+  "title.contact": "contato"
 }
