@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ import Logo from "../../public/logo.svg";
 import { useHeader } from "../../hooks/useHeader";
 
 const Header: FC = () => {
-  const { switchLanguage, language, isActive } = useHeader() as any;
+  const { switchLanguage, language } = useHeader() as any;
   const handleChange = (value: any) => {
     switchLanguage(value.id);
   };
@@ -40,14 +40,14 @@ const Header: FC = () => {
         <Lang>
           <button
             onClick={(event) => handleChange(event.currentTarget)}
-            className={isActive.pt.isActive ? "is-active" : ""}
+            className={language.pt.isActive ? "is-active" : ""}
             id="pt-br"
           >
             pt
           </button>
           <button
             onClick={(event) => handleChange(event.currentTarget)}
-            className={isActive.en.isActive ? "is-active" : ""}
+            className={language.en.isActive ? "is-active" : ""}
             id="en-us"
           >
             en

@@ -10,7 +10,7 @@ import { BsPlayFill } from "react-icons/bs";
 import { BsDownload } from "react-icons/bs";
 
 import { Main, Container } from "../styles/global";
-import { Section } from "./styles";
+import { Section } from "../styles/home/styles";
 import { postsLangPt, postsLangEn } from "../pages/api/posts";
 import { useHeader } from "../hooks/useHeader";
 import Cover from "../public/images/background-image.jpeg";
@@ -197,7 +197,9 @@ const Home: NextPage = () => {
             <div className="author__actions">
               <button className="btn btn--download">
                 <BsDownload />
-                download CV
+                {language.currentLanguage === "pt-br"
+                  ? fm("button.download")
+                  : eng("button.download")}
               </button>
             </div>
           </div>

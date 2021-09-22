@@ -5,37 +5,22 @@ const HeaderContext = createContext({});
 const HeaderProvider = ({ children }: any) => {
   const [language, setLanguage] = useState({
     currentLanguage: getLanguageFromLocalStorage(),
-  });
-  const [isActive, setIsActive] = useState({
-    pt: {
-      isActive: getIsActiveFromLocalStorage(),
-    },
-    en: {
-      isActive: getIsActiveFromLocalStorage(),
-    },
+    pt: { isActive: getPtFromLocalStorage() },
+    en: { isActive: getEnFromLocalStorage() },
   });
 
   const switchLanguage = (lang: any) => {
     if (lang === "pt-br") {
-      setLanguage({ currentLanguage: "pt-br" });
-      setIsActive({
-        pt: {
-          isActive: true,
-        },
-        en: {
-          isActive: false,
-        },
+      setLanguage({
+        currentLanguage: "pt-br",
+        pt: { isActive: true },
+        en: { isActive: false },
       });
-      localStorage.getItem("current");
     } else {
-      setLanguage({ currentLanguage: "en-us" });
-      setIsActive({
-        pt: {
-          isActive: false,
-        },
-        en: {
-          isActive: true,
-        },
+      setLanguage({
+        currentLanguage: "en-us",
+        pt: { isActive: false },
+        en: { isActive: true },
       });
     }
   };
@@ -48,23 +33,29 @@ const HeaderProvider = ({ children }: any) => {
     }
   }
 
-  function getIsActiveFromLocalStorage() {
+  function getPtFromLocalStorage() {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("currentIsActive")
-        ? localStorage.getItem("currentIsActive")
-        : false;
+      return localStorage.getItem("pt") ? localStorage.getItem("pt") : false;
+    }
+  }
+
+  function getEnFromLocalStorage() {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("en") ? localStorage.getItem("en") : false;
     }
   }
 
   useEffect(() => {
     localStorage.setItem("currentLanguage", String(language.currentLanguage));
-    localStorage.setItem("currentIsActive", JSON.stringify(isActive));
+    localStorage.setItem("pt", String(language.pt.isActive));
+    localStorage.setItem("en", String(language.en.isActive));
     getLanguageFromLocalStorage();
-    getIsActiveFromLocalStorage();
-  }, [language.currentLanguage, isActive]);
+    getPtFromLocalStorage();
+    getEnFromLocalStorage();
+  }, [language.currentLanguage, language.pt.isActive, language.en.isActive]);
 
   return (
-    <HeaderContext.Provider value={{ switchLanguage, language, isActive }}>
+    <HeaderContext.Provider value={{ switchLanguage, language }}>
       {children}
     </HeaderContext.Provider>
   );
