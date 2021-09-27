@@ -5,22 +5,16 @@ const HeaderContext = createContext({});
 const HeaderProvider = ({ children }: any) => {
   const [language, setLanguage] = useState({
     currentLanguage: getLanguageFromLocalStorage(),
-    pt: { isActive: getPtFromLocalStorage() },
-    en: { isActive: getEnFromLocalStorage() },
   });
 
   const switchLanguage = (lang: any) => {
     if (lang === "pt-br") {
       setLanguage({
         currentLanguage: "pt-br",
-        pt: { isActive: true },
-        en: { isActive: false },
       });
     } else {
       setLanguage({
         currentLanguage: "en-us",
-        pt: { isActive: false },
-        en: { isActive: true },
       });
     }
   };
@@ -33,26 +27,10 @@ const HeaderProvider = ({ children }: any) => {
     }
   }
 
-  function getPtFromLocalStorage() {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("pt") ? localStorage.getItem("pt") : false;
-    }
-  }
-
-  function getEnFromLocalStorage() {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("en") ? localStorage.getItem("en") : false;
-    }
-  }
-
   useEffect(() => {
     localStorage.setItem("currentLanguage", String(language.currentLanguage));
-    localStorage.setItem("pt", String(language.pt.isActive));
-    localStorage.setItem("en", String(language.en.isActive));
     getLanguageFromLocalStorage();
-    getPtFromLocalStorage();
-    getEnFromLocalStorage();
-  }, [language.currentLanguage, language.pt.isActive, language.en.isActive]);
+  }, [language.currentLanguage]);
 
   return (
     <HeaderContext.Provider value={{ switchLanguage, language }}>

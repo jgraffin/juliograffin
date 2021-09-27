@@ -1,17 +1,39 @@
-import { FC } from "react";
+import {
+  FC,
+  useState,
+  useEffect,
+  useCallback,
+  ChangeEvent,
+  MouseEvent,
+} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import fm from "format-message";
 
 import { HeaderWrapper, Brand, Nav, Lang } from "./styles";
 import { Container } from "../../styles/global";
-import Logo from "../../public/logo.svg";
 import { useHeader } from "../../hooks/useHeader";
+import { eng } from "../../locales/translate";
+import Logo from "../../public/logo.svg";
 
 const Header: FC = () => {
   const { switchLanguage, language } = useHeader() as any;
-  const handleChange = (value: any) => {
-    switchLanguage(value.id);
+  const [isActivePtBr, setIsActivePtBr] = useState("");
+  const [isActiveEnUs, setIsActiveEnUs] = useState("");
+  const handleChange = (event: MouseEvent<HTMLButtonElement>) => {
+    const { id } = event.currentTarget;
+    switchLanguage(id);
   };
+
+  useEffect(() => {
+    if (language.currentLanguage === "pt-br") {
+      setIsActivePtBr("is-active");
+      setIsActiveEnUs("");
+    } else {
+      setIsActiveEnUs("is-active");
+      setIsActivePtBr("");
+    }
+  }, [language]);
 
   return (
     <HeaderWrapper>
@@ -27,27 +49,31 @@ const Header: FC = () => {
           <ul>
             <li>
               <button>
-                {language.currentLanguage === "pt-br" ? "Trabalhos" : "Work"}
+                {language.currentLanguage === "pt-br"
+                  ? fm("title.jobs")
+                  : eng("title.jobs")}
               </button>
             </li>
             <li>
               <button>
-                {language.currentLanguage === "pt-br" ? "Contato" : "Contact"}
+                {language.currentLanguage === "pt-br"
+                  ? fm("title.contact")
+                  : eng("title.contact")}
               </button>
             </li>
           </ul>
         </Nav>
         <Lang>
           <button
-            onClick={(event) => handleChange(event.currentTarget)}
-            className={language.pt.isActive ? "is-active" : ""}
+            onClick={(e) => handleChange(e)}
+            className={isActivePtBr}
             id="pt-br"
           >
             pt
           </button>
           <button
-            onClick={(event) => handleChange(event.currentTarget)}
-            className={language.en.isActive ? "is-active" : ""}
+            onClick={(e) => handleChange(e)}
+            className={isActiveEnUs}
             id="en-us"
           >
             en

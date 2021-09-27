@@ -9,6 +9,7 @@ formatMessage.setup({
   translations: {
     pt,
   },
+  missingTranslation: "ignore",
 });
 
 eng.setup({
@@ -16,6 +17,7 @@ eng.setup({
   translations: {
     en,
   },
+  missingTranslation: "ignore",
 });
 
 export { eng };
