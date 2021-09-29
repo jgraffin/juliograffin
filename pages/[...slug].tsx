@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import fm from "format-message";
 import content from "../frontaid.content.json";
 import { Main, Container } from "../styles/global";
@@ -18,20 +18,37 @@ import { eng } from "../locales/translate";
 export default function Page({ page }: any) {
   const { language } = useHeader() as any;
   const carousel = useRef(null);
+  const [hasManyCards, setHasManyCards] = useState(false);
+  const [hasPrevious, setHasPrevious] = useState(false);
+  const [hasNext, setHasNext] = useState(false);
   const handlePrev = (e: any) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   };
 
   const handleNext = (e: any) => {
+    // let offset = 50;
+    // let newWidth = offset + carousel.current.scrollLeft;
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
+
+    // if (newWidth === carousel.current.offsetWidth) {
+    //   setHasNext(true);
+    // } else {
+    //   setHasNext(false);
+    // }
   };
+
+  useEffect(() => {
+    if (content.pages.length > 5) {
+      setHasManyCards(true);
+    }
+  }, []);
   return (
     <Main>
       <Section
         className="intro intro--inner"
-        style={{ backgroundImage: `url(${page.cover})` }}
+        style={{ backgroundImage: `url(${page?.cover})` }}
       >
         <Container>
           <div className="intro--inner__hero">
@@ -43,19 +60,19 @@ export default function Page({ page }: any) {
             <h2>
               {language.currentLanguage === "pt-br"
                 ? page.title
-                : page.title_en}
+                : page?.title_en}
             </h2>
             <p>
               {language.currentLanguage === "pt-br"
                 ? page.description
-                : page.description_en}
+                : page?.description_en}
             </p>
           </div>
         </Container>
       </Section>
       <SectionArea className="content-area">
         <Container>
-          <Hero style={{ backgroundImage: `url(${page.cover})` }} />
+          <Hero style={{ backgroundImage: `url(${page?.cover})` }} />
           <ContentArea>
             <div
               className="content-area__heading"
@@ -63,7 +80,7 @@ export default function Page({ page }: any) {
                 __html:
                   language.currentLanguage === "pt-br"
                     ? page.heading
-                    : page.heading_en,
+                    : page?.heading_en,
               }}
             ></div>
             <div
@@ -72,7 +89,7 @@ export default function Page({ page }: any) {
                 __html:
                   language.currentLanguage === "pt-br"
                     ? page.content
-                    : page.content_en,
+                    : page?.content_en,
               }}
             ></div>
           </ContentArea>
@@ -80,31 +97,53 @@ export default function Page({ page }: any) {
       </SectionArea>
       <SectionScreenShotArea>screenshot area</SectionScreenShotArea>
       <Carousel>
-        <Container className="carousel" ref={carousel}>
-          {content.pages.map((item: any) => (
-            <Card
-              key={item.id}
-              slug={item.url}
-              path={item.path}
-              tag={item.tag}
-              thumb={item.thumb}
-              title={
-                language.currentLanguage === "pt-br"
-                  ? item.title
-                  : item.title_en
-              }
-              description={
-                language.currentLanguage === "pt-br"
-                  ? item.description
-                  : item.description_en
-              }
-            />
-          ))}
-        </Container>
-        <CarouselButtons>
-          <button onClick={handlePrev}>prev</button>
-          <button onClick={handleNext}>next</button>
-        </CarouselButtons>
+        <div className={hasManyCards ? "has-many-cards" : ""}>
+          <h2>
+            {language.currentLanguage === "pt-br"
+              ? fm("title.other.jobs")
+              : eng("title.other.jobs")}
+          </h2>
+          <Container className="carousel" ref={carousel}>
+            {content.pages.length === 0 ? (
+              <p>loading...</p>
+            ) : (
+              content.pages
+                .filter((value: any) => {
+                  if (value.id !== page?.id) {
+                    return value;
+                  }
+                  return null;
+                })
+                .map((item: any) => {
+                  return (
+                    <Card
+                      key={item.id}
+                      slug={item.url}
+                      path={item.path}
+                      tag={item.tag}
+                      thumb={item.thumb}
+                      title={
+                        language.currentLanguage === "pt-br"
+                          ? item.title
+                          : item.title_en
+                      }
+                      description={
+                        language.currentLanguage === "pt-br"
+                          ? item.description
+                          : item.description_en
+                      }
+                    />
+                  );
+                })
+            )}
+          </Container>
+          {hasManyCards && (
+            <CarouselButtons>
+              <button onClick={handlePrev}></button>
+              <button onClick={handleNext}></button>
+            </CarouselButtons>
+          )}
+        </div>
       </Carousel>
     </Main>
   );

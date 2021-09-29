@@ -156,7 +156,7 @@ const Home: NextPage = () => {
                 title={
                   language.currentLanguage === "pt-br"
                     ? item.title
-                    : item.title_en
+                    : item?.title_en
                 }
                 description={
                   language.currentLanguage === "pt-br"

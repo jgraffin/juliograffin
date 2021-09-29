@@ -90,21 +90,131 @@ export const SectionScreenShotArea = styled.section`
 export const Carousel = styled.section`
   width: 100%;
   display: block;
+  padding: 8rem 0;
+
+  > div {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 3rem;
+      font-family: "jetbrains_mono_nlbold";
+      position: relative;
+      z-index: 6;
+      display: block;
+      padding: 1.5rem 0 0 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      width: 750px;
+    }
+
+    @media (min-width: 992px) {
+      width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 1140px;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+      content: "";
+      width: 60px;
+      height: 100%;
+      position: absolute;
+      left: 15px;
+      top: 0;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 5;
+    }
+
+    &::after {
+      left: auto;
+      right: -15px;
+      background: linear-gradient(
+        -90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &.has-many-cards {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+  }
 
   .carousel {
-    position: relative;
-    transition: all 0.4s;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card-link {
+      width: 350px;
+      margin-right: 2rem;
+      flex: none;
+      padding-top: 3rem;
+
+      a {
+        > div {
+          &:first-child {
+            box-shadow: 0 5px 13px 0px rgb(0 0 0 / 37%);
+          }
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 `;
 
 export const CarouselButtons = styled.div`
-  width: 300px;
+  width: auto;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 5;
+  z-index: 6;
+  margin: 26.5rem 1.5rem 0 0;
 
   button {
-    background-color: #dadada;
+    cursor: pointer;
+    background-color: #f1c40f;
+    width: 42px;
+    height: 42px;
+    border-radius: 90px;
+    margin: 0 0.5rem;
+
+    &::before {
+      content: "";
+      width: 42px;
+      height: 42px;
+      display: block;
+      background: url("../arrow.svg") no-repeat center center;
+      transform: rotate(90deg);
+      background-size: 17px;
+    }
+
+    &:last-of-type {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
   }
 `;
