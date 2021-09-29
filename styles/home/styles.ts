@@ -201,6 +201,31 @@ export const Section = styled.section`
     }
   }
 
+  &.intro.intro--inner {
+    height: auto;
+
+    &::after {
+      display: none;
+    }
+
+    .intro--inner__hero {
+      display: block;
+      width: 60rem;
+      padding: 15rem 0 10rem;
+
+      h5 {
+        color: #ffffff;
+        font-size: 2rem;
+      }
+
+      h2 {
+        color: #f1c40f;
+        font-family: "jetbrains_mono_nlextrabold";
+        font-size: 5rem;
+      }
+    }
+  }
+
   &.content {
     display: flex;
     justify-content: space-between;

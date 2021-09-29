@@ -71,5 +71,3 @@ export const Container = styled.div`
     width: 1140px;
   }
 `;
-
-export const Section = styled.section``;

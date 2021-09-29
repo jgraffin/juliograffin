@@ -2,30 +2,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { Article } from "./styles";
 import { HiPlusSm } from "react-icons/hi";
+import { CardProps } from "../../types/card";
 
-type CardProps = {
-  url: string;
-  title: string;
-  image: string;
-  description: string;
-  tag: string;
-};
-
-const Card = ({ url, title, image, description, tag }: CardProps) => {
+const Card = ({ path, slug, title, thumb, description, tag }: CardProps) => {
   return (
     <Article className="card-link">
-      <Link href={url} passHref>
+      <Link href="[...slug]" as={path}>
         <a>
           <div>
             <HiPlusSm />
             <span>{tag}</span>
             <Image
-              src={image}
+              src={thumb}
               alt={title}
               width={350}
               height={190}
               placeholder="blur"
-              blurDataURL={image}
+              blurDataURL={thumb}
             />
           </div>
           <div>

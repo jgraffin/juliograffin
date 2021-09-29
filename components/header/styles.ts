@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 6;
   display: flex;
   align-items: center;
 

@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
 import Image from "next/image";
@@ -11,11 +11,11 @@ import { BsDownload } from "react-icons/bs";
 
 import { Main, Container } from "../styles/global";
 import { Section } from "../styles/home/styles";
-import { postsLangPt, postsLangEn } from "../pages/api/posts";
 import { useHeader } from "../hooks/useHeader";
+import { eng } from "../locales/translate";
 import Cover from "../public/images/background-image.jpeg";
 import Card from "../components/card";
-import { eng } from "../locales/translate";
+import content from "../frontaid.content.json";
 
 type Options = {
   width: string;
@@ -146,27 +146,25 @@ const Home: NextPage = () => {
             </h2>
           </div>
           <div className="content__jobs__cards">
-            {language.currentLanguage === "pt-br"
-              ? postsLangPt.map((item: any) => (
-                  <Card
-                    key={item.id}
-                    url={item.url}
-                    tag={item.tag}
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                  />
-                ))
-              : postsLangEn.map((item: any) => (
-                  <Card
-                    key={item.id}
-                    url={item.url}
-                    tag={item.tag}
-                    image={item.image}
-                    title={item.title}
-                    description={item.description}
-                  />
-                ))}
+            {content.pages.map((item: any) => (
+              <Card
+                key={item.id}
+                slug={item.url}
+                path={item.path}
+                tag={item.tag}
+                thumb={item.thumb}
+                title={
+                  language.currentLanguage === "pt-br"
+                    ? item.title
+                    : item.title_en
+                }
+                description={
+                  language.currentLanguage === "pt-br"
+                    ? item.description
+                    : item.description_en
+                }
+              />
+            ))}
           </div>
         </div>
         <div className="content__about">
