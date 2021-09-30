@@ -211,7 +211,7 @@ export const CarouselButtons = styled.div`
       background-size: 17px;
     }
 
-    &:last-of-type {
+    &#next {
       &::before {
         transform: rotate(-90deg);
       }

@@ -20,23 +20,25 @@ export default function Page({ page }: any) {
   const carousel = useRef(null);
   const [hasManyCards, setHasManyCards] = useState(false);
   const [hasPrevious, setHasPrevious] = useState(false);
-  const [hasNext, setHasNext] = useState(false);
+  const [hasNext, setHasNext] = useState(true);
   const handlePrev = (e: any) => {
     e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    const scrolled = (carousel.current.scrollLeft -=
+      carousel.current.offsetWidth);
+
+    if (scrolled <= 0) {
+      setHasPrevious(false);
+    }
   };
 
   const handleNext = (e: any) => {
-    // let offset = 50;
-    // let newWidth = offset + carousel.current.scrollLeft;
     e.preventDefault();
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
+    const scrolled = (carousel.current.scrollLeft +=
+      carousel.current.offsetWidth);
 
-    // if (newWidth === carousel.current.offsetWidth) {
-    //   setHasNext(true);
-    // } else {
-    //   setHasNext(false);
-    // }
+    if (scrolled > 0) {
+      setHasPrevious(true);
+    }
   };
 
   useEffect(() => {
@@ -139,8 +141,8 @@ export default function Page({ page }: any) {
           </Container>
           {hasManyCards && (
             <CarouselButtons>
-              <button onClick={handlePrev}></button>
-              <button onClick={handleNext}></button>
+              {hasPrevious && <button id="prev" onClick={handlePrev}></button>}
+              {hasNext && <button id="next" onClick={handleNext}></button>}
             </CarouselButtons>
           )}
         </div>
