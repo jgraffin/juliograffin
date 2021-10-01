@@ -37,10 +37,27 @@ export const Section = styled.section`
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px) {
+      height: 90vh;
+    }
+
     h1 {
-      font-size: 5rem;
+      font-size: 3.5rem;
       color: #ffffff;
       font-family: "jetbrains_mono_nlextrabold";
+
+      @media (max-width: 768px) {
+        line-height: 4.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      @media (max-width: 375px) {
+        margin-top: 5rem;
+      }
+
+      @media (min-width: 769px) {
+        font-size: 5rem;
+      }
     }
 
     p {
@@ -78,19 +95,34 @@ export const Section = styled.section`
       display: flex;
       justify-content: space-between;
       z-index: 3;
+      flex-direction: column;
+
+      @media (min-width: 769px) {
+        flex-direction: row;
+      }
     }
 
     .intro__text {
       display: flex;
       flex-wrap: wrap;
-      width: 48.55rem;
+      width: 100%;
+      margin-bottom: 2rem;
+
+      @media (min-width: 769px) {
+        width: 48.55rem;
+        margin-bottom: 0;
+      }
 
       .intro-button--next {
         cursor: pointer;
-        display: inline-block;
+        display: none;
         margin-right: 4rem;
         background: transparent;
         transition: ease-in-out 0.3s;
+
+        @media (min-width: 769px) {
+          display: inline-block;
+        }
 
         &:hover {
           transform: translateY(0.5rem);
@@ -105,6 +137,10 @@ export const Section = styled.section`
       }
 
       .intro-button--video {
+        @media (max-width: 768px) {
+          display: none;
+        }
+
         &:hover {
           background: #ffffff;
         }
@@ -126,7 +162,11 @@ export const Section = styled.section`
     .intro__video {
       cursor: pointer;
       position: relative;
-      width: 50rem;
+      width: 100%;
+
+      @media (min-width: 769px) {
+        width: 50rem;
+      }
 
       &::before,
       &::after {

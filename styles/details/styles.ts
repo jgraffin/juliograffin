@@ -192,6 +192,11 @@ export const CarouselButtons = styled.div`
   top: 0;
   z-index: 6;
   margin: 26.5rem 1.5rem 0 0;
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+  }
 
   button {
     cursor: pointer;
