@@ -8,5 +8,8 @@
   "title.other.jobs": "other jobs",
   "title.contact": "contact",
   "button.download": "download CV",
-  "text.rights": "juliograffin.com / All Rights Reserved"
+  "button.go.back.home": "go back to home",
+  "text.rights": "juliograffin.com / All Rights Reserved",
+  "not.found": "nothing found here 😞",
+  "not.found.text": "Ooops! Seems you've type something wrong, or this page no longer exists."
 }

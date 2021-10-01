@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
 import Image from "next/image";
@@ -25,7 +25,7 @@ type Options = {
 
 const modalStyles = {
   overlay: {
-    zIndex: 9,
+    zIndex: 12,
     backgroundColor: "rgba(0,0,0,0.7)",
   },
 
@@ -51,7 +51,6 @@ const Home: NextPage = () => {
   }
 
   const checkElapsedTime = (e: any) => {
-    console.log(e.target.playerInfo.playerState);
     const duration = e.target.getDuration();
     const currentTime = e.target.getCurrentTime();
     if (currentTime / duration > 0.95) {
@@ -105,7 +104,18 @@ const Home: NextPage = () => {
                 ? fm("screen.home.intro.description")
                 : eng("screen.home.intro.description")}
             </p>
-            <button className="intro-button intro-button--next">
+            <button
+              className="intro-button intro-button--next"
+              onClick={(e) => {
+                let jobs = document.getElementById("jobs");
+                e.preventDefault();
+                jobs &&
+                  jobs.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+              }}
+            >
               <AiOutlineArrowDown />
             </button>
             <button
@@ -132,7 +142,7 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </Section>
-      <Section className="content">
+      <Section className="content" id="jobs">
         <div className="content__jobs">
           <div className="content__jobs__title">
             <h2>

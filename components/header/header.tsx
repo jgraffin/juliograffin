@@ -19,6 +19,11 @@ const Header: FC = () => {
   };
 
   useEffect(() => {
+    let url = window.location.href.split("/");
+    let target = url[url.length - 1].toLowerCase();
+    let element = document.getElementById(target);
+    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+
     if (language.currentLanguage === "pt-br") {
       setIsActivePtBr("is-active");
       setIsActiveEnUs("");
@@ -41,17 +46,20 @@ const Header: FC = () => {
         <Nav>
           <ul>
             <li>
-              <button>
+              <button
+                onClick={(e) => {
+                  let jobs = document.getElementById("jobs");
+                  e.preventDefault();
+                  jobs &&
+                    jobs.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
                 {language.currentLanguage === "pt-br"
                   ? fm("title.jobs")
                   : eng("title.jobs")}
-              </button>
-            </li>
-            <li>
-              <button>
-                {language.currentLanguage === "pt-br"
-                  ? fm("title.contact")
-                  : eng("title.contact")}
               </button>
             </li>
           </ul>

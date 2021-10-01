@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 6;
+  z-index: 10;
   display: flex;
   align-items: center;
 
@@ -24,10 +24,13 @@ export const Brand = styled.div`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
+  display: none;
   align-items: center;
-  margin-right: 4.6rem;
   transform: translateY(-3rem);
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
   ul {
     display: flex;
@@ -40,12 +43,6 @@ export const Nav = styled.nav`
         margin: 0 3rem;
         content: "/";
         color: #ffffff;
-      }
-
-      &:last-child {
-        &::after {
-          display: none;
-        }
       }
 
       button {
@@ -63,10 +60,14 @@ export const Nav = styled.nav`
 `;
 
 export const Lang = styled.nav`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transform: translateY(-3rem);
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
   button {
     color: #ffffff;
