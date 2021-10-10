@@ -17,6 +17,7 @@ import { eng } from "../../locales/translate";
 import Logo from "../../public/logo.svg";
 import { CgMenuRight } from "react-icons/cg";
 import { VscClose } from "react-icons/vsc";
+import content from "../../frontaid.content.json";
 
 const Header: FC = () => {
   const { switchLanguage, language } = useHeader() as any;
@@ -122,6 +123,23 @@ const Header: FC = () => {
               </li>
             </ul>
           </Nav>
+          <div className="content__jobs">
+            <ul>
+              {content.pages.map((item: any) => (
+                <li key={item.id}>
+                  <Link href="[...slug]" as={item.path}>
+                    <a onClick={handleOpenNav}>
+                      <h3>
+                        {language.currentLanguage === "pt-br"
+                          ? item.title
+                          : item?.title_en}
+                      </h3>
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </NavMobile>
       )}
     </>

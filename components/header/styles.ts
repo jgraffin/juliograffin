@@ -31,7 +31,8 @@ export const HeaderWrapper = styled.header`
     top: 0;
     z-index: 5;
     background: rgb(0, 0, 0);
-    opacity: 0.7;
+    opacity: 0.8;
+    box-shadow: 0 -15px 15px 24px rgb(0 0 0 / 0.8);
   }
 
   > div {
@@ -43,7 +44,6 @@ export const HeaderWrapper = styled.header`
   }
 
   @media (min-width: 769px) {
-    height: 15rem;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0) 0%,
@@ -54,20 +54,16 @@ export const HeaderWrapper = styled.header`
 
 export const Brand = styled.div`
   margin-right: auto;
+  width: 16rem;
 
   @media (max-width: 768px) {
-    width: 17rem;
-  }
-
-  @media (min-width: 769px) {
-    transform: translateY(-3rem);
+    width: 14rem;
   }
 `;
 
 export const Nav = styled.nav`
   display: none;
   align-items: center;
-  transform: translateY(-3rem);
 
   @media (min-width: 768px) {
     display: flex;
@@ -105,10 +101,6 @@ export const Lang = styled.nav`
   align-items: center;
   justify-content: center;
   transform: none;
-
-  @media (min-width: 769px) {
-    transform: translateY(0);
-  }
 
   button {
     color: #ffffff;
@@ -165,12 +157,12 @@ export const NavMobile = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  width: 50%;
+  width: 60%;
   height: 100%;
   z-index: 6;
   background: #111111;
   box-shadow: 0px 2px 30px 20px rgba(0, 0, 0, 0.5);
-  padding-top: 12rem;
+  padding-top: 10rem;
 
   nav {
     display: flex;
@@ -180,7 +172,7 @@ export const NavMobile = styled.div`
     ul {
       width: 100%;
       justify-content: flex-end;
-      padding-right: 24px;
+      padding-right: 15px;
 
       li {
         &:after {
@@ -194,15 +186,42 @@ export const NavMobile = styled.div`
     }
 
     &:last-of-type {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 3rem 2.4rem 0 0;
-      margin-top: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem 0 2rem 0;
 
       button {
         font-size: 2rem;
 
         &:last-of-type {
           margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .content__jobs {
+    display: block;
+    padding: 2rem 15px 0 0;
+
+    ul {
+      display: block;
+      text-align: right;
+      padding-left: 24px;
+
+      li {
+        margin-bottom: 2rem;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #ffffff;
+          font-size: 1.2rem;
+          line-height: 2.6rem;
         }
       }
     }

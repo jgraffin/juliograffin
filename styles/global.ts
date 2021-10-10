@@ -11,6 +11,51 @@ const GlobalStyle = createGlobalStyle`
     font-family: "jetbrains_monothin";
     font-weight: normal;
     list-style-type: none;
+    
+  }
+
+  
+
+  .ReactModal__Overlay {
+    padding: 15px !important;
+  }
+
+  .ReactModal__Body--open {
+    * {
+      cursor: url("../window-close.svg") 30 30, move;
+    }
+  }
+
+  .ReactModal__Content {
+    border-radius: 8px !important;
+    padding: 0 !important;
+
+    @media (max-width: 992px) {
+      position: relative !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .video-container { 
+    @media (max-width: 992px) {
+      position: relative; 
+      padding-bottom: 56.25%; 
+      padding-top: 0; 
+      height: 0; 
+      overflow: hidden; 
+    }
+  }
+
+  .video-container iframe, 
+  .video-container object, 
+  .video-container embed { 
+    @media (max-width: 992px) {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+    }
   }
 
 

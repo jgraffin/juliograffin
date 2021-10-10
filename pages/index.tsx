@@ -18,8 +18,6 @@ import Card from "../components/card";
 import content from "../frontaid.content.json";
 
 type Options = {
-  width: string;
-  height: string;
   playerVars: {};
 };
 
@@ -68,8 +66,6 @@ const Home: NextPage = () => {
   };
 
   const opts: Options = {
-    width: "1024",
-    height: "576",
     playerVars: { autoplay: 0, controls: 0 },
   };
 
@@ -82,7 +78,7 @@ const Home: NextPage = () => {
       >
         <YouTube
           videoId={videoCode}
-          containerClassName="embed embed-youtube"
+          containerClassName="video-container"
           onStateChange={(e) => checkElapsedTime(e)}
           opts={opts}
         />
@@ -176,6 +172,7 @@ const Home: NextPage = () => {
               />
             ))}
           </div>
+          <span id="curved-corner-bottomright"></span>
         </div>
         <div className="content__about">
           <div className="content__about__author">

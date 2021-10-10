@@ -65,9 +65,11 @@ export const Article = styled.article`
       margin-top: 3rem;
 
       h3 {
+        display: block;
         text-transform: uppercase;
         font-size: 1.6rem;
         font-family: "jetbrains_mono_nlXBdIt";
+        margin-bottom: 2rem;
       }
 
       p {

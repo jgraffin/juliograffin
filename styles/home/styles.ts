@@ -55,7 +55,7 @@ export const Section = styled.section`
         margin-top: 5rem;
       }
 
-      @media (min-width: 769px) {
+      @media (min-width: 991px) {
         font-size: 5rem;
       }
     }
@@ -78,7 +78,7 @@ export const Section = styled.section`
       background-image: linear-gradient(
         180deg,
         #000000 0%,
-        rgba(0, 0, 0, 0.86) 100%
+        rgba(0, 0, 0, 0.8) 100%
       );
     }
 
@@ -97,7 +97,7 @@ export const Section = styled.section`
       z-index: 3;
       flex-direction: column;
 
-      @media (min-width: 769px) {
+      @media (min-width: 992px) {
         flex-direction: row;
       }
     }
@@ -108,7 +108,12 @@ export const Section = styled.section`
       width: 100%;
       margin-bottom: 2rem;
 
-      @media (min-width: 769px) {
+      @media (min-width: 600px) and (max-width: 991px) {
+        margin: 0 auto 2rem auto;
+        width: 54rem;
+      }
+
+      @media (min-width: 992px) {
         width: 48.55rem;
         margin-bottom: 0;
       }
@@ -120,7 +125,7 @@ export const Section = styled.section`
         background: transparent;
         transition: ease-in-out 0.3s;
 
-        @media (min-width: 769px) {
+        @media (min-width: 992px) {
           display: inline-block;
         }
 
@@ -137,8 +142,14 @@ export const Section = styled.section`
       }
 
       .intro-button--video {
-        @media (max-width: 768px) {
+        margin-top: 2rem;
+
+        @media (max-width: 767px) {
           display: none;
+        }
+
+        @media (min-width: 992px) {
+          margin-top: 0;
         }
 
         &:hover {
@@ -164,7 +175,13 @@ export const Section = styled.section`
       position: relative;
       width: 100%;
 
-      @media (min-width: 769px) {
+      @media (min-width: 600px) and (max-width: 991px) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (min-width: 992px) {
         width: 50rem;
       }
 
@@ -271,6 +288,11 @@ export const Section = styled.section`
     justify-content: space-between;
     width: 100%;
     position: relative;
+    flex-direction: column;
+
+    @media (min-width: 769px) {
+      flex-direction: row;
+    }
 
     &::after {
       content: "";
@@ -280,36 +302,98 @@ export const Section = styled.section`
       justify-content: flex-end;
       display: flex;
       flex-wrap: wrap;
-      border-top-right-radius: 60px;
       background: #f1c40f;
-      padding: 6rem 6rem 8rem 0;
-      width: 60%;
+      padding: 2rem 15px 4rem 15px;
+      width: 100%;
+      position: relative;
+
+      @media (min-width: 769px) {
+        border-top-right-radius: 60px;
+        padding: 6rem 6rem 8rem 0;
+        width: 60%;
+      }
 
       .content__jobs__title {
-        width: 68.5rem;
+        width: 100%;
+
+        @media (min-width: 769px) {
+          width: 51.5rem;
+        }
 
         h2 {
-          font-size: 3rem;
+          font-size: 2.5rem;
           font-family: "jetbrains_mono_nlextrabold";
           margin-bottom: 2rem;
           width: 40rem;
+
+          @media (min-width: 769px) {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      #curved-corner-bottomright {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+
+        @media (min-width: 769px) {
+          display: none;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 200%;
+          height: 200%;
+          position: absolute;
+          border-radius: 50%;
+          bottom: 0;
+          right: 0;
+          box-shadow: 0 -50px 0 100px #ffffff;
         }
       }
     }
 
     .content__jobs__cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-gap: 3rem;
-      width: 68.5rem;
+      width: 100%;
+
+      @media (min-width: 550px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (min-width: 769px) {
+        width: 51.5rem;
+      }
+
+      /* @media (min-width: 992px) {
+        grid-template-columns: 1fr 1fr;
+        width: 68.5rem;
+        background: red;
+      } */
+      /* 
+      @media (min-width: 1200px) {
+        width: 62.5rem;
+      } */
     }
 
     .content__about {
       display: flex;
       flex-direction: column;
-      width: 30%;
+      width: 100%;
       margin-right: auto;
       position: relative;
+
+      @media (min-width: 769px) {
+        width: 37rem;
+      }
 
       #curved-corner-bottomleft {
         width: 100px;
@@ -333,16 +417,26 @@ export const Section = styled.section`
       }
 
       &__author {
+        align-items: flex-end;
         display: flex;
         flex-direction: column;
-        padding: 6rem 0 0 3rem;
+        padding: 3rem 1.5rem 2rem 1.5rem;
+
+        @media (min-width: 769px) {
+          align-items: flex-start;
+          padding: 6rem 0 0 3rem;
+        }
 
         .author__image {
-          margin-bottom: 2rem;
+          margin: 0 auto 2rem 0;
         }
 
         .author__text {
-          width: 33rem;
+          width: 100%;
+
+          @media (min-width: 769px) {
+            width: 33rem;
+          }
 
           p {
             font-size: 1.4rem;

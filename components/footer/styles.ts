@@ -16,7 +16,12 @@ export const FooterWrapper = styled.footer`
     position: relative;
 
     &:first-of-type {
-      padding-bottom: 6.8rem;
+      padding-bottom: 2.8rem;
+
+      @media (min-width: 992px) {
+        padding-bottom: 6.8rem;
+      }
+
       h2 {
         color: #ffffff;
         display: block;
@@ -56,7 +61,11 @@ export const FooterWrapper = styled.footer`
       align-items: center;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top: 8rem;
+      padding-top: 4rem;
+
+      @media (min-width: 992px) {
+        padding-top: 8rem;
+      }
 
       div {
         ul {
@@ -84,6 +93,7 @@ export const FooterWrapper = styled.footer`
         p {
           color: #ffffff;
           font-size: 1.5rem;
+          line-height: 2.4rem;
           text-align: right;
         }
       }
