@@ -267,18 +267,39 @@ export const Section = styled.section`
 
     .intro--inner__hero {
       display: block;
-      width: 60rem;
-      padding: 15rem 0 10rem;
+      padding: 10rem 0 10rem;
+      width: 100%;
+
+      @media (min-width: 769px) {
+        padding: 15rem 0 10rem;
+        width: 60rem;
+      }
 
       h5 {
+        display: block;
         color: #ffffff;
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+
+        @media (min-width: 769px) {
+          font-size: 2rem;
+        }
       }
 
       h2 {
         color: #f1c40f;
         font-family: "jetbrains_mono_nlextrabold";
-        font-size: 5rem;
+        font-size: 3rem;
+        line-height: 5.2rem;
+        margin-bottom: 1rem;
+
+        @media (min-width: 769px) {
+          font-size: 5rem;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
       }
     }
   }
@@ -289,6 +310,12 @@ export const Section = styled.section`
     width: 100%;
     position: relative;
     flex-direction: column;
+
+    #jobs {
+      display: block;
+      position: relative;
+      transform: translateY(-78px);
+    }
 
     @media (min-width: 769px) {
       flex-direction: row;
@@ -317,17 +344,28 @@ export const Section = styled.section`
         width: 100%;
 
         @media (min-width: 769px) {
+          padding-left: 1.5rem;
+          width: 39rem;
+        }
+
+        @media (min-width: 992px) {
+          padding-left: 0;
           width: 51.5rem;
+        }
+
+        @media (min-width: 1199px) {
+          width: 65.5rem;
         }
 
         h2 {
           font-size: 2.5rem;
           font-family: "jetbrains_mono_nlextrabold";
           margin-bottom: 2rem;
-          width: 40rem;
+          width: 100%;
 
           @media (min-width: 769px) {
             font-size: 3rem;
+            width: 40rem;
           }
         }
       }
@@ -365,23 +403,24 @@ export const Section = styled.section`
       grid-gap: 3rem;
       width: 100%;
 
-      @media (min-width: 550px) {
+      @media (min-width: 550px) and (max-width: 768px) {
         grid-template-columns: 1fr 1fr;
       }
 
       @media (min-width: 769px) {
+        padding-left: 1.5rem;
+        width: 39rem;
+      }
+
+      @media (min-width: 992px) {
+        padding-left: 0;
+        grid-template-columns: 1fr 1fr;
         width: 51.5rem;
       }
 
-      /* @media (min-width: 992px) {
-        grid-template-columns: 1fr 1fr;
-        width: 68.5rem;
-        background: red;
-      } */
-      /* 
-      @media (min-width: 1200px) {
-        width: 62.5rem;
-      } */
+      @media (min-width: 1199px) {
+        width: 65.5rem;
+      }
     }
 
     .content__about {
@@ -392,7 +431,16 @@ export const Section = styled.section`
       position: relative;
 
       @media (min-width: 769px) {
+        padding-left: 1.5rem;
+        width: 29rem;
+      }
+
+      @media (min-width: 992px) {
         width: 37rem;
+      }
+
+      @media (min-width: 1199px) {
+        width: 42rem;
       }
 
       #curved-corner-bottomleft {
@@ -429,14 +477,13 @@ export const Section = styled.section`
 
         .author__image {
           margin: 0 auto 2rem 0;
+          position: relative;
+          height: 64px;
+          width: 64px;
         }
 
         .author__text {
           width: 100%;
-
-          @media (min-width: 769px) {
-            width: 33rem;
-          }
 
           p {
             font-size: 1.4rem;
@@ -455,6 +502,7 @@ export const Section = styled.section`
             padding: 0.4rem 2rem;
             border: 1px solid transparent;
             transition: none;
+            font-size: 1.4rem;
 
             svg {
               font-size: 2rem;

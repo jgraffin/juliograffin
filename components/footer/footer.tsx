@@ -41,22 +41,22 @@ const Footer: FC = () => {
           <div>
             <ul>
               <li>
-                <Link href="/" passHref>
-                  <a>
+                <Link href="https://github.com/jgraffin" passHref>
+                  <a target="_blank" rel="noopener noreferrer">
                     <AiOutlineGithub />
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
-                  <a>
+                <Link href="https://linkedin.com/in/juliograffin" passHref>
+                  <a target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/" passHref>
-                  <a>
+                <Link href="https://www.instagram.com/jotagraffin/" passHref>
+                  <a target="_blank" rel="noopener noreferrer">
                     <GrInstagram />
                   </a>
                 </Link>
@@ -65,7 +65,7 @@ const Footer: FC = () => {
           </div>
           <div>
             <p>
-              &copy; 2021 -{" "}
+              <span>&copy;</span> 2021 -{" "}
               {language.currentLanguage === "pt-br"
                 ? fm("text.rights")
                 : eng("text.rights")}

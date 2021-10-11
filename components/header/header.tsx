@@ -68,6 +68,7 @@ const Header: FC = () => {
                   onClick={(e) => {
                     let jobs = document.getElementById("jobs");
                     e.preventDefault();
+
                     jobs &&
                       jobs.scrollIntoView({
                         behavior: "smooth",
@@ -109,6 +110,8 @@ const Header: FC = () => {
                   onClick={(e) => {
                     let jobs = document.getElementById("jobs");
                     e.preventDefault();
+                    setIsNavOpened(false);
+
                     jobs &&
                       jobs.scrollIntoView({
                         behavior: "smooth",

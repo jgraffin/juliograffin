@@ -18,10 +18,6 @@ export const FooterWrapper = styled.footer`
     &:first-of-type {
       padding-bottom: 2.8rem;
 
-      @media (min-width: 992px) {
-        padding-bottom: 6.8rem;
-      }
-
       h2 {
         color: #ffffff;
         display: block;
@@ -63,10 +59,6 @@ export const FooterWrapper = styled.footer`
       grid-template-columns: 1fr 1fr;
       padding-top: 4rem;
 
-      @media (min-width: 992px) {
-        padding-top: 8rem;
-      }
-
       div {
         ul {
           align-items: center;
@@ -74,6 +66,14 @@ export const FooterWrapper = styled.footer`
 
           li {
             margin-right: 2rem;
+
+            &:first-child {
+              svg {
+                fill: #f1c40f;
+                height: 2.4rem;
+                width: 2.4rem;
+              }
+            }
           }
         }
 
@@ -87,14 +87,22 @@ export const FooterWrapper = styled.footer`
 
           svg {
             fill: #f1c40f;
+            height: 2.2rem;
+            width: 2.2rem;
           }
         }
 
         p {
           color: #ffffff;
-          font-size: 1.5rem;
-          line-height: 2.4rem;
+          font-size: 1.2rem;
+          line-height: 2.2rem;
           text-align: right;
+
+          span {
+            display: inline-block;
+            font-size: 2.2rem;
+            vertical-align: middle;
+          }
         }
       }
     }

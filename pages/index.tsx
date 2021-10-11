@@ -14,6 +14,7 @@ import { Section } from "../styles/home/styles";
 import { useHeader } from "../hooks/useHeader";
 import { eng } from "../locales/translate";
 import Cover from "../public/images/background-image.jpeg";
+import Photo from "../public/julio-graffin.png";
 import Card from "../components/card";
 import content from "../frontaid.content.json";
 
@@ -138,7 +139,8 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </Section>
-      <Section className="content" id="jobs">
+      <Section className="content">
+        <div id="jobs"></div>
         <div className="content__jobs">
           <div className="content__jobs__title">
             <h2>
@@ -178,10 +180,11 @@ const Home: NextPage = () => {
           <div className="content__about__author">
             <div className="author__image">
               <Image
-                src="/julio-graffin.png?download=true"
+                src={Photo}
                 alt="Julio Graffin"
-                width={64}
-                height={64}
+                height={150}
+                width={150}
+                placeholder="blur"
               />
             </div>
             <div className="author__text">

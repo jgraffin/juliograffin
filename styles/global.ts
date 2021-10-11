@@ -11,10 +11,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "jetbrains_monothin";
     font-weight: normal;
     list-style-type: none;
-    
   }
-
-  
 
   .ReactModal__Overlay {
     padding: 15px !important;
@@ -76,16 +73,8 @@ const GlobalStyle = createGlobalStyle`
     transition: ease-in-out 0.3s;
   }
 
-  @media (max-width: 720px){
-    html, body {
-      font-size: 52.5%;
-    }
-  }
-
-  @media (min-width: 721px){
-    html, body {
-      font-size: 62.5%;
-    }
+  html, body {
+    font-size: 62.5%;
   }
 `;
 

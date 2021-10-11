@@ -5,13 +5,16 @@ export const Hero = styled.section`
   border-radius: 12px;
   overflow: hidden;
   display: block;
-  height: 370px;
+  height: 200px;
   position: relative;
   z-index: 5;
   margin: -6rem 0 0 0;
   background-size: cover;
-  box-shadow: 0px 0 20px 6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.37);
+
+  @media (min-width: 769px) {
+    height: 370px;
+  }
 
   &::before {
     opacity: 0.5;
@@ -34,7 +37,11 @@ export const Hero = styled.section`
 export const ContentArea = styled.section`
   width: 100%;
   display: block;
-  padding: 7rem 14rem;
+  padding: 3rem 2rem;
+
+  @media (min-width: 769px) {
+    padding: 7rem 14rem;
+  }
 
   .content-area__heading {
     display: block;
@@ -43,8 +50,12 @@ export const ContentArea = styled.section`
     h2 {
       display: block;
       font-family: "jetbrains_mono_nlbold";
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
+
+      @media (min-width: 769px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -73,7 +84,11 @@ export const SectionArea = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 6rem;
+      padding: 0 1.5rem;
+
+      @media (min-width: 769px) {
+        padding: 0 6rem;
+      }
     }
   }
 `;
@@ -90,7 +105,11 @@ export const SectionScreenShotArea = styled.section`
 export const Carousel = styled.section`
   width: 100%;
   display: block;
-  padding: 8rem 0;
+  padding: 2rem 0;
+
+  @media (min-width: 769px) {
+    padding: 8rem 0;
+  }
 
   > div {
     position: relative;
@@ -99,12 +118,16 @@ export const Carousel = styled.section`
     margin: 0 auto;
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-family: "jetbrains_mono_nlbold";
       position: relative;
       z-index: 6;
       display: block;
       padding: 1.5rem 0 0 1.5rem;
+
+      @media (min-width: 769px) {
+        font-size: 3rem;
+      }
     }
 
     @media (min-width: 768px) {
@@ -139,12 +162,16 @@ export const Carousel = styled.section`
 
     &::after {
       left: auto;
-      right: -15px;
+      right: 15px;
       background: linear-gradient(
         -90deg,
         rgba(255, 255, 255, 1) 0%,
         rgba(255, 255, 255, 0) 100%
       );
+
+      @media (min-width: 769px) {
+        right: -15px;
+      }
     }
 
     &.has-many-cards {
