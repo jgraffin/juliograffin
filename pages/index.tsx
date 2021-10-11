@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
 import Image from "next/image";

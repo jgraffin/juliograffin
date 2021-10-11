@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import fm from "format-message";
 import content from "../frontaid.content.json";
 import { Main, Container } from "../styles/global";
@@ -45,7 +46,7 @@ export default function Page({ page }: any) {
   };
 
   useEffect(() => {
-    if (content.pages.length > 5) {
+    if (content.pages.length >= 5) {
       setHasManyCards(true);
     }
   }, []);
@@ -110,7 +111,16 @@ export default function Page({ page }: any) {
               </ContentArea>
             </Container>
           </SectionArea>
-          <SectionScreenShotArea>screenshot area</SectionScreenShotArea>
+          <SectionScreenShotArea className={"image-container"}>
+            <Image
+              src={page?.screenshot}
+              alt={page?.title}
+              layout="fill"
+              placeholder="blur"
+              className={"image"}
+              blurDataURL={page?.screenshot}
+            />
+          </SectionScreenShotArea>
           <Carousel id="jobs">
             <div className={hasManyCards ? "has-many-cards" : ""}>
               <h2>

@@ -94,12 +94,25 @@ export const SectionArea = styled.section`
 `;
 
 export const SectionScreenShotArea = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d8d8d8;
-  padding: 2rem;
+  display: block;
   width: 100%;
+  position: relative;
+  height: 100%;
+
+  &.image-container {
+    width: 100%;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
 `;
 
 export const Carousel = styled.section`
