@@ -100,7 +100,7 @@ export const FooterWrapper = styled.footer`
 
           span {
             display: inline-block;
-            font-size: 2.2rem;
+            font-size: 1.6rem;
             vertical-align: middle;
           }
         }

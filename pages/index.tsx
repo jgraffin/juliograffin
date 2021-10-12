@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { Children, useState } from "react";
+import { useState } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
 import Image from "next/image";
@@ -191,9 +191,11 @@ const Home: NextPage = () => {
               {language.currentLanguage === "pt-br"
                 ? fm.rich(fm("author.text"), {
                     p: ({ children }: any) => <p>{children}</p>,
+                    strong: ({ children }: any) => <strong>{children}</strong>,
                   })
                 : eng.rich(eng("author.text"), {
                     p: ({ children }: any) => <p>{children}</p>,
+                    strong: ({ children }: any) => <strong>{children}</strong>,
                   })}
             </div>
             <div className="author__actions">
@@ -205,7 +207,6 @@ const Home: NextPage = () => {
               </button>
             </div>
           </div>
-          <span id="curved-corner-bottomleft"></span>
         </div>
       </Section>
     </Main>

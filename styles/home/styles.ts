@@ -305,6 +305,7 @@ export const Section = styled.section`
   }
 
   &.content {
+    align-items: flex-start;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -329,7 +330,12 @@ export const Section = styled.section`
       justify-content: flex-end;
       display: flex;
       flex-wrap: wrap;
-      background: #f1c40f;
+      background: rgb(241, 196, 15);
+      background: linear-gradient(
+        180deg,
+        rgba(241, 196, 15, 1) 86%,
+        rgba(255, 255, 255, 0) 100%
+      );
       padding: 2rem 15px 4rem 15px;
       width: 100%;
       position: relative;
@@ -367,32 +373,6 @@ export const Section = styled.section`
             font-size: 3rem;
             width: 40rem;
           }
-        }
-      }
-
-      #curved-corner-bottomright {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        display: block;
-
-        @media (min-width: 769px) {
-          display: none;
-        }
-
-        &::before {
-          content: "";
-          display: block;
-          width: 200%;
-          height: 200%;
-          position: absolute;
-          border-radius: 50%;
-          bottom: 0;
-          right: 0;
-          box-shadow: 0 -50px 0 100px #ffffff;
         }
       }
     }
@@ -443,29 +423,7 @@ export const Section = styled.section`
         width: 42rem;
       }
 
-      #curved-corner-bottomleft {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
-        &::before {
-          content: "";
-          display: block;
-          width: 200%;
-          height: 200%;
-          position: absolute;
-          border-radius: 50%;
-          bottom: 0;
-          left: 0;
-          box-shadow: -50px 50px 0 0 #f1c40f;
-        }
-      }
-
       &__author {
-        align-items: flex-end;
         display: flex;
         flex-direction: column;
         padding: 3rem 1.5rem 2rem 1.5rem;
@@ -493,6 +451,11 @@ export const Section = styled.section`
             line-height: 2.6rem;
             margin-bottom: 1.5rem;
             color: #111111;
+
+            strong {
+              font-family: "Montserrat";
+              font-weight: 700;
+            }
           }
         }
 
