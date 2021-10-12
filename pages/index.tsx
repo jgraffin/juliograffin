@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import { useState } from "react";
+import { Children, useState } from "react";
 import type { NextPage } from "next";
 import fm from "format-message";
 import Image from "next/image";
@@ -163,13 +163,13 @@ const Home: NextPage = () => {
                 thumb={item.thumb}
                 title={
                   language.currentLanguage === "pt-br"
-                    ? item.title
+                    ? item?.title
                     : item?.title_en
                 }
                 description={
                   language.currentLanguage === "pt-br"
-                    ? item.description
-                    : item.description_en
+                    ? item?.description
+                    : item?.description_en
                 }
               />
             ))}
@@ -188,19 +188,13 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="author__text">
-              <p>
-                Sed consectetur nibh sit amet dictum feugiat. Nullam justo
-                tellus, dictum sed eros non, ullamcorper dictum metus. Maecenas
-                in ligula id mi tristique pharetra vel ut ex. Duis rutrum urna
-                at erat condimentum, non gravida mauris mollis.
-              </p>
-              <p>
-                Phasellus pulvinar tortor id neque congue, et semper nisl
-                congue. Pellentesque pellentesque nibh sed tellus auctor
-                scelerisque. Duis dignissim nunc suscipit finibus vulputate.
-                Suspendisse potenti. Donec ante tortor, accumsan in ultrices
-                non, viverra vitae est.
-              </p>
+              {language.currentLanguage === "pt-br"
+                ? fm.rich(fm("author.text"), {
+                    p: ({ children }: any) => <p>{children}</p>,
+                  })
+                : eng.rich(eng("author.text"), {
+                    p: ({ children }: any) => <p>{children}</p>,
+                  })}
             </div>
             <div className="author__actions">
               <button className="btn btn--download">

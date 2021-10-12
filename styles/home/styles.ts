@@ -483,6 +483,7 @@ export const Section = styled.section`
         }
 
         .author__text {
+          display: block;
           width: 100%;
 
           p {
@@ -490,7 +491,7 @@ export const Section = styled.section`
             font-family: "Montserrat";
             font-weight: 300;
             line-height: 2.6rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             color: #111111;
           }
         }
@@ -503,6 +504,7 @@ export const Section = styled.section`
             border: 1px solid transparent;
             transition: none;
             font-size: 1.4rem;
+            margin-bottom: 4rem;
 
             svg {
               font-size: 2rem;
