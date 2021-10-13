@@ -51,10 +51,13 @@ export const ContentArea = styled.section`
       display: block;
       font-family: "jetbrains_mono_nlbold";
       font-size: 2rem;
+      line-height: 3rem;
+      font-weight: normal;
       margin-bottom: 2rem;
 
       @media (min-width: 769px) {
         font-size: 3rem;
+        line-height: 3.5rem;
       }
     }
   }
@@ -69,7 +72,22 @@ export const ContentArea = styled.section`
       margin-bottom: 2rem;
       font-family: "Montserrat";
       font-size: 1.4rem;
-      line-height: 2.8rem;
+      line-height: 2.4rem;
+
+      strong,
+      a {
+        font-family: "Montserrat";
+        font-weight: 700;
+      }
+
+      a {
+        color: #f1c40f;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
       &:last-of-type {
         margin-bottom: 0;
