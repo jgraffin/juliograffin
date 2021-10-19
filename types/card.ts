@@ -6,5 +6,5 @@ export type CardProps = {
   cover?: string;
   description: string;
   content?: string;
-  tag: string;
+  tags: [];
 };

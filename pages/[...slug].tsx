@@ -23,6 +23,7 @@ export default function Page({ page }: any) {
   const [hasManyCards, setHasManyCards] = useState(false);
   const [hasPrevious, setHasPrevious] = useState(false);
   const [hasNext, setHasNext] = useState(true);
+
   const handlePrev = (e: any) => {
     e.preventDefault();
     const scrolled = (carousel.current.scrollLeft -=
@@ -49,7 +50,8 @@ export default function Page({ page }: any) {
     if (content.pages.length >= 5) {
       setHasManyCards(true);
     }
-  }, []);
+  }, [language.currentLanguage]);
+
   return (
     <Main className={!page?.title ? "page-not-found" : ""}>
       <Section
@@ -88,39 +90,52 @@ export default function Page({ page }: any) {
         <>
           <SectionArea className="content-area">
             <Container>
-              <Hero style={{ backgroundImage: `url(${page?.cover})` }} />
+              <Hero style={{ backgroundImage: `url(${page?.hero})` }} />
               <ContentArea>
-                <div
-                  className="content-area__heading"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      language.currentLanguage === "pt-br"
-                        ? page?.heading
-                        : page?.heading_en,
-                  }}
-                ></div>
-                <div
-                  className="content-area__post"
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      language.currentLanguage === "pt-br"
-                        ? page?.content
-                        : page?.content_en,
-                  }}
-                ></div>
+                {language.currentLanguage === "pt-br" && (
+                  <>
+                    <div
+                      className="content-area__heading"
+                      dangerouslySetInnerHTML={{ __html: page?.heading }}
+                    />
+                    <div
+                      className="content-area__post"
+                      dangerouslySetInnerHTML={{
+                        __html: page?.content,
+                      }}
+                    />
+                  </>
+                )}
+
+                {language.currentLanguage === "en-us" && (
+                  <>
+                    <div
+                      className="content-area__heading"
+                      dangerouslySetInnerHTML={{ __html: page?.heading_en }}
+                    />
+                    <div
+                      className="content-area__post"
+                      dangerouslySetInnerHTML={{
+                        __html: page?.content_en,
+                      }}
+                    />
+                  </>
+                )}
               </ContentArea>
             </Container>
           </SectionArea>
-          <SectionScreenShotArea className={"image-container"}>
-            <Image
-              src={page?.screenshot}
-              alt={page?.title}
-              layout="fill"
-              placeholder="blur"
-              className={"image"}
-              blurDataURL={page?.screenshot}
-            />
-          </SectionScreenShotArea>
+          {page?.screenshot && (
+            <SectionScreenShotArea className={"image-container"}>
+              <Image
+                src={page?.screenshot}
+                alt={page?.title}
+                layout="fill"
+                placeholder="blur"
+                className={"image"}
+                blurDataURL={page?.screenshot}
+              />
+            </SectionScreenShotArea>
+          )}
           <Carousel id="jobs">
             <div className={hasManyCards ? "has-many-cards" : ""}>
               <h2>
@@ -145,7 +160,7 @@ export default function Page({ page }: any) {
                           key={item.id}
                           slug={item.url}
                           path={item.path}
-                          tag={item.tag}
+                          tags={item.tags}
                           thumb={item.thumb}
                           title={
                             language.currentLanguage === "pt-br"

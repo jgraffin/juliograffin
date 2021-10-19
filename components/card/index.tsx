@@ -4,14 +4,18 @@ import { Article } from "./styles";
 import { HiPlusSm } from "react-icons/hi";
 import { CardProps } from "../../types/card";
 
-const Card = ({ path, slug, title, thumb, description, tag }: CardProps) => {
+const Card = ({ path, slug, title, thumb, description, tags }: CardProps) => {
   return (
     <Article className="card-link">
       <Link href="[...slug]" as={path}>
         <a>
           <div>
             <HiPlusSm />
-            <span>{tag}</span>
+            <ul className="card-link__tags">
+              {tags?.map((i: any) => (
+                <li key={i.item}>{i.item}</li>
+              ))}
+            </ul>
             <Image
               src={thumb}
               alt={title}

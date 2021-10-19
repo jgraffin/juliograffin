@@ -159,7 +159,7 @@ const Home: NextPage = () => {
                 key={item.id}
                 slug={item.url}
                 path={item.path}
-                tag={item.tag}
+                tags={item.tags}
                 thumb={item.thumb}
                 title={
                   language.currentLanguage === "pt-br"

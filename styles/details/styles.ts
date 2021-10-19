@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const Hero = styled.section`
   width: 100%;
@@ -9,7 +9,8 @@ export const Hero = styled.section`
   position: relative;
   z-index: 5;
   margin: -6rem 0 0 0;
-  background-size: cover;
+  background-size: 105%;
+  background-position: center center;
   box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.37);
 
   @media (min-width: 769px) {
@@ -25,7 +26,6 @@ export const Hero = styled.section`
     left: 0;
     top: 0;
     z-index: 2;
-    opacity: 0.7;
     background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.16) 0%,
@@ -92,6 +92,11 @@ export const ContentArea = styled.section`
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+
+    h2 {
+      font-family: "jetbrains_mono_nlbold";
+      font-size: 2rem;
     }
   }
 `;

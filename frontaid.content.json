@@ -2,10 +2,38 @@
   "pages": [
     {
       "id": "0",
+      "url": "bradesco-seguros-app",
+      "path": "/bradesco-seguros-app",
+      "tags": [
+        {
+          "item": "#layout"
+        },
+        {
+          "item": "#frontend"
+        }
+      ],
+      "thumb": "/screenshots/bradesco-seguros-thumb.jpeg",
+      "cover": "/screenshots/bradesco-seguros-thumb.jpeg",
+      "hero": "/screenshots/bradesco-seguros-app-cover.png",
+      "title": "Aplicativo - Bradesco Seguros Celular",
+      "title_en": "App - Bradesco Seguros Celular",
+      "heading": "<h2>A experiência que tive ao trabalhar em uma das maiores empresas financeiras de seguros do Brasil.</h2>",
+      "heading_en": "<h2>The experience I had working in one of the biggests insurance financial at Brazil.</h2>",
+      "content": "<p>Trabalhei na agência <a href='http://sabion.com.br/' target='_blank' rel='noopener noreferrer'>Sabion Digital</a>, e tive o privilégio de atuar em um dos seus grandes clientes e uma das maiores seguradoras do Brasil, a <strong>Bradesco Seguros</strong>.<p>Iniciei no final de 2017 e atuei primeiramente no time de design UI. Obtive muita experiência desenhando as telas do app atual da empresa, e atuando na implementação de novas funcionalidades.</p><h2>O desafio</h2><p>Tive junto do time de design UI e UX o desafio de trabalhar no novo conceito da experiência digital da empresa, e durante o processo de ideação e criação, continuar dando suporte e desenvolver as novas funcionalidades dentro do app atual.</p><p>Esse sem dúvida foi pra mim um projeto do qual adquiri muita experiência em <strong>design atômico</strong>, <strong>tokenização</strong>, <strong>design sprint</strong> e as melhores práticas de desenvolvimento de software, onde o único objetivo era a entrega de valor ao produto para o cliente final.</p><h2>Conceitos base</h2><p>Trabalho focado no conceito <a href='https://bradfrost.com/blog/post/atomic-web-design/' target='_blank' rel='noopener noreferrer'>Atomic Design</a>, onde basicamente o layout, a sua parte visual foi desenvolvida respeitando o conceito atômico, onde tudo e qualquer elemento de tela é subdivido em partes menores.</p><p>Dessa forma é possível reutilizar esses elementos visuais, juntá-los em diferentes contextos, contudo mantendo a mesma linguagem visual da empresa, tendo assim uma experiência <strong>ominichannel</strong>.</p>",
+      "content_en": "<p>I've worked at <a href='http://sabion.com.br/' target='_blank' rel='noopener noreferrer'>Sabion Digital</a> agency, and I had the privilege to act in one of them big clients and one of the biggests insurance financial at Brazil, <strong>Bradesco Seguros</strong>.<p>I started at the end of 2017 and I've acted firstly in design UI team. I had a bunch of experience drawing some screens to the current company's app, and implementing new features aswell.</p><h2>The challenge</h2><p>I got with design UI and UX team the challenge to work in a new digital experience concept of the company, and throughout the idea and creation, keep giving support and develop new features within current app.</p><p>This one it was no doubt a project in which I got a lot of experience by working with <strong>atomic design</strong>, <strong>tokenization</strong>, <strong>design sprint</strong> and the best software development practices, where the only objective it was to delivering the value within a product to the final customer.</p><h2>Conceitos base</h2><p>Trabalho focado no conceito <a href='https://bradfrost.com/blog/post/atomic-web-design/' target='_blank' rel='noopener noreferrer'>Atomic Design</a>, onde basicamente o layout, a sua parte visual foi desenvolvida respeitando o conceito atômico, onde tudo e qualquer elemento de tela é subdivido em partes menores.</p><p>Dessa forma é possível reutilizar esses elementos visuais, juntá-los em diferentes contextos, contudo mantendo a mesma linguagem visual da empresa, tendo assim uma experiência <strong>ominichannel</strong>.</p>",
+      "description": "A experiência que tive ao trabalhar em uma das maiores empresas financeiras de seguros do Brasil.",
+      "description_en": "The experience I had working in one of the biggests insurance financial at Brazil.",
+      "screenshot": ""
+    },
+    {
+      "id": "1",
       "url": "voam-volvo-odontologia-e-assistencia-medica",
       "path": "/voam-volvo-odontologia-e-assistencia-medica",
-      "path_en": "/voam-volvo-medical-assistance",
-      "tag": "#frontend",
+      "tags": [
+        {
+          "item": "#frontend"
+        }
+      ],
       "thumb": "/screenshots/voam-cover.png",
       "cover": "/screenshots/voam-cover.png",
       "title": "Voam - Volvo Odontologia e Assistência Médica",
@@ -19,10 +47,14 @@
       "screenshot": "/screenshots/voam-full-page.png"
     },
     {
-      "id": "1",
+      "id": "2",
       "url": "tretis",
       "path": "/tretis-tv",
-      "tag": "#frontend",
+      "tags": [
+        {
+          "item": "#frontend"
+        }
+      ],
       "thumb": "/screenshots/tretis-cover.png",
       "cover": "/screenshots/tretis-cover.png",
       "title": "Tretis TV",
@@ -36,10 +68,14 @@
       "screenshot": "/screenshots/tretis-full-page.png"
     },
     {
-      "id": "2",
+      "id": "3",
       "url": "guandalini-sampaio-advogados",
       "path": "/guandalini-sampaio-advogados",
-      "tag": "#layout",
+      "tags": [
+        {
+          "item": "#layout"
+        }
+      ],
       "thumb": "/screenshots/guandalini-cover.png",
       "cover": "/screenshots/guandalini-cover.png",
       "title": "Guandalini Sampaio Advogados",
@@ -53,10 +89,14 @@
       "screenshot": "/screenshots/guandalini-full-page.png"
     },
     {
-      "id": "3",
+      "id": "4",
       "url": "atlas-da-acidentalidade-volvo",
       "path": "/atlas-da-acidentalidade-volvo",
-      "tag": "#frontend",
+      "tags": [
+        {
+          "item": "#frontend"
+        }
+      ],
       "thumb": "/screenshots/volvo-cover.png",
       "cover": "/screenshots/volvo-cover.png",
       "title": "Atlas da Acidentalidade no Transporte Brasileiro",
@@ -70,10 +110,14 @@
       "screenshot": "/screenshots/volvo-full-page.png"
     },
     {
-      "id": "4",
+      "id": "5",
       "url": "tecnoeste-maquinas-equipamentos",
       "path": "/tecnoeste-maquinas-equipamentos",
-      "tag": "#frontend",
+      "tags": [
+        {
+          "item": "#frontend"
+        }
+      ],
       "thumb": "/screenshots/tecnoeste-cover.png",
       "cover": "/screenshots/tecnoeste-cover.png",
       "title": "Tecnoeste Máquinas e Equipamentos Ltda.",

@@ -10,7 +10,6 @@ export const Article = styled.article`
 
     &:first-child {
       position: relative;
-      box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.37);
       border-radius: 12px;
       overflow: hidden;
 
@@ -18,15 +17,20 @@ export const Article = styled.article`
         border-radius: 12px;
       }
 
-      span {
-        font-family: "jetbrains_mono_nlXBdIt";
-        font-size: 1.4rem;
+      .card-link__tags {
         position: absolute;
         right: 0;
         bottom: 0;
-        z-index: 3;
-        color: #ffffff;
         margin: 2rem;
+        z-index: 3;
+        display: flex;
+
+        li {
+          font-family: "jetbrains_mono_nlXBdIt";
+          font-size: 1.4rem;
+          color: #ffffff;
+          margin-left: 1rem;
+        }
       }
 
       svg {
@@ -51,6 +55,7 @@ export const Article = styled.article`
             top: 0;
             left: 0;
             z-index: 2;
+            opacity: 0.8;
             background-image: linear-gradient(
               180deg,
               rgba(0, 0, 0, 0.1) 0%,

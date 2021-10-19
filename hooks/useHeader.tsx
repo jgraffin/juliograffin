@@ -21,15 +21,12 @@ const HeaderProvider = ({ children }: any) => {
 
   function getLanguageFromLocalStorage() {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("currentLanguage")
-        ? localStorage.getItem("currentLanguage")
-        : 1;
+      return localStorage.getItem("currentLanguage");
     }
   }
 
   useEffect(() => {
     localStorage.setItem("currentLanguage", String(language.currentLanguage));
-    getLanguageFromLocalStorage();
   }, [language.currentLanguage]);
 
   return (
