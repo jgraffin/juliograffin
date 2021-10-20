@@ -15,6 +15,7 @@ export const Article = styled.article`
 
       img {
         border-radius: 12px;
+        object-fit: cover;
       }
 
       .card-link__tags {

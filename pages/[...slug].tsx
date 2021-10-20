@@ -124,16 +124,29 @@ export default function Page({ page }: any) {
               </ContentArea>
             </Container>
           </SectionArea>
+
           {page?.screenshot && (
             <SectionScreenShotArea className={"image-container"}>
-              <Image
-                src={page?.screenshot}
-                alt={page?.title}
-                layout="fill"
-                placeholder="blur"
-                className={"image"}
-                blurDataURL={page?.screenshot}
-              />
+              {page?.screenshot[0] && (
+                <Image
+                  src={page?.screenshot[0]}
+                  alt={page?.title}
+                  layout="fill"
+                  placeholder="blur"
+                  className={"image"}
+                  blurDataURL={page?.screenshot[0]}
+                />
+              )}
+              {page?.screenshot[1] && (
+                <Image
+                  src={page?.screenshot[1]}
+                  alt={page?.title}
+                  layout="fill"
+                  placeholder="blur"
+                  className={"image"}
+                  blurDataURL={page?.screenshot[1]}
+                />
+              )}
             </SectionScreenShotArea>
           )}
           <Carousel id="jobs">
