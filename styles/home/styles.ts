@@ -269,6 +269,10 @@ export const Section = styled.section`
       display: none;
     }
 
+    &::before {
+      opacity: 0.8;
+    }
+
     .intro--inner__hero {
       display: block;
       padding: 10rem 0 10rem;

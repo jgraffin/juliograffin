@@ -11,14 +11,14 @@ export const Hero = styled.section`
   margin: -6rem 0 0 0;
   background-size: 105%;
   background-position: center center;
-  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.37);
+  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.2);
 
   @media (min-width: 769px) {
     height: 370px;
   }
 
   &::before {
-    opacity: 0.5;
+    opacity: 0.4;
     content: "";
     width: 100%;
     height: 100%;
@@ -57,7 +57,7 @@ export const ContentArea = styled.section`
 
       @media (min-width: 769px) {
         font-size: 3rem;
-        line-height: 3.5rem;
+        line-height: 4rem;
       }
     }
   }
@@ -87,10 +87,6 @@ export const ContentArea = styled.section`
         &:hover {
           text-decoration: none;
         }
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
       }
     }
 

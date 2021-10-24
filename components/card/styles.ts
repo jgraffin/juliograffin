@@ -56,7 +56,7 @@ export const Article = styled.article`
             top: 0;
             left: 0;
             z-index: 2;
-            opacity: 0.8;
+            opacity: 0.6;
             background-image: linear-gradient(
               180deg,
               rgba(0, 0, 0, 0.1) 0%,
