@@ -28,8 +28,8 @@ const Footer: FC = () => {
           </h2>
           <ul>
             <li>
-              <Link href="/" passHref>
-                <a>me@juliograffin.com</a>
+              <Link href="mailto:juliograffin@gmail.com">
+                <a>juliograffin@gmail.com</a>
               </Link>
             </li>
             <li>

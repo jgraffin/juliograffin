@@ -47,7 +47,8 @@ export const Section = styled.section`
       font-family: "jetbrains_mono_nlextrabold";
 
       @media (max-width: 768px) {
-        line-height: 4.5rem;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
         margin-bottom: 1.5rem;
       }
 
@@ -64,6 +65,10 @@ export const Section = styled.section`
       font-size: 1.6rem;
       line-height: 3rem;
       color: #ffffff;
+
+      @media (min-width: 992px) {
+        margin-bottom: 2rem;
+      }
     }
 
     &::before,
@@ -143,12 +148,10 @@ export const Section = styled.section`
 
       .intro-button--video {
         margin-top: 2rem;
-
-        @media (max-width: 767px) {
-          display: none;
-        }
+        display: none;
 
         @media (min-width: 992px) {
+          display: flex;
           margin-top: 0;
         }
 
@@ -173,7 +176,12 @@ export const Section = styled.section`
     .intro__video {
       cursor: pointer;
       position: relative;
-      width: 100%;
+      margin: 0 auto;
+      width: 80%;
+
+      @media (min-width: 661px) {
+        width: 60%;
+      }
 
       @media (min-width: 600px) and (max-width: 991px) {
         align-items: center;
@@ -254,6 +262,13 @@ export const Section = styled.section`
 
       img {
         border-radius: 12px;
+      }
+    }
+
+    &.is-hidden {
+      .intro-button--video,
+      .intro__video {
+        visibility: hidden;
       }
     }
   }
@@ -476,6 +491,7 @@ export const Section = styled.section`
             transition: none;
             font-size: 1.4rem;
             margin-bottom: 4rem;
+            display: none;
 
             svg {
               font-size: 2rem;

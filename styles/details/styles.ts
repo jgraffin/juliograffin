@@ -1,17 +1,30 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Hero = styled.section`
-  width: 100%;
+  animation: ${slideInUp} ease-in-out 0.5s forwards;
+  background-color: #f4f4f4;
+  background-position: center center;
+  background-size: 105%;
   border-radius: 12px;
-  overflow: hidden;
+  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.2);
   display: block;
   height: 200px;
-  position: relative;
-  z-index: 5;
   margin: -6rem 0 0 0;
-  background-size: 105%;
-  background-position: center center;
-  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 5;
 
   @media (min-width: 769px) {
     height: 370px;

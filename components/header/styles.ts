@@ -22,6 +22,10 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
 
+  @media (max-width: 768px) {
+    height: 6.5rem;
+  }
+
   &::after {
     content: "";
     width: 100%;
@@ -31,8 +35,12 @@ export const HeaderWrapper = styled.header`
     top: 0;
     z-index: 5;
     background: rgb(0, 0, 0);
-    opacity: 0.8;
-    box-shadow: 0 -15px 15px 24px rgb(0 0 0 / 0.8);
+    opacity: 0.6;
+    box-shadow: 0 -15px 15px 24px rgb(0 0 0 / 0.4);
+
+    @media (max-width: 768px) {
+      height: 6.5rem;
+    }
   }
 
   > div {

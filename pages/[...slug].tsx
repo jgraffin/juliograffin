@@ -56,7 +56,10 @@ export default function Page({ page }: any) {
     <Main className={!page?.title ? "page-not-found" : ""}>
       <Section
         className="intro intro--inner"
-        style={{ backgroundImage: `url(${page?.cover})` }}
+        style={{
+          backgroundColor: page?.hex,
+          backgroundImage: `url(${page?.cover})`,
+        }}
       >
         <Container>
           <div className="intro--inner__hero">

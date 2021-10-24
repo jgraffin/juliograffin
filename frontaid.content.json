@@ -17,6 +17,7 @@
       "hero": "/screenshots/bradesco-seguros-app-cover.png",
       "title": "Aplicativo - Empresa de Seguros Bradesco Seguros Celular",
       "title_en": "App - Insurance company Bradesco Seguros Celular",
+      "hex": "#C10F45",
       "heading": "<h2>A experiência que tive ao trabalhar em uma das maiores empresas financeiras de seguros do Brasil.</h2>",
       "heading_en": "<h2>The experience I had working in one of the biggests insurance financial at Brazil.</h2>",
       "content": "<p>Trabalhei na agência <a href='http://sabion.com.br/' target='_blank' rel='noopener noreferrer'>Sabion Digital</a>, e tive o privilégio de atuar em um dos seus grandes clientes e uma das maiores seguradoras do Brasil, a <strong>Bradesco Seguros</strong>.<p>Iniciei no final de 2017 e atuei primeiramente no time de design UI. Obtive muita experiência desenhando as telas do app atual da empresa, e atuando na implementação de novas funcionalidades.</p><h2>O desafio do design</h2><p>Tive junto do time de design UI e UX o desafio de trabalhar no novo conceito da experiência digital da empresa, e durante o processo de ideação e criação, continuar dando suporte e desenvolver as novas funcionalidades dentro do app atual.</p><p>Esse sem dúvida foi pra mim um projeto do qual adquiri muita experiência em <strong>design atômico</strong>, <strong>tokenização</strong>, <strong>design sprint</strong> e as melhores práticas de desenvolvimento de software, onde o único objetivo era a entrega de valor ao produto para o cliente final.</p><h2>Conceitos base</h2><p>Trabalho focado no conceito <a href='https://bradfrost.com/blog/post/atomic-web-design/' target='_blank' rel='noopener noreferrer'>Atomic Design</a>, onde basicamente o layout, a sua parte visual foi desenvolvida respeitando o conceito atômico, onde tudo e qualquer elemento de tela é subdivido em partes menores.</p><p>Dessa forma é possível reutilizar esses elementos visuais, juntá-los em diferentes contextos, contudo mantendo a mesma linguagem visual da empresa, tendo assim uma experiência <strong>ominichannel</strong>.</p><h2>O desafio do frontend</h2><p>Após muito trabalho feito no setor de design, surgiu uma oportunidade de trabalhar na área de TI. Como já tinha experiência nas telas que havia criado, foi bem fácil de dar continuidade no trabalho de codificação.</p><p>Atuei com um time super profissional, onde adquiri bastante experiência no desenvolvimento de software de ponta-a-ponta.</p>",
@@ -39,13 +40,17 @@
       "hero": "/screenshots/volvo-atlas-hero.png",
       "title": "Volvo - Atlas da Acidentalidade no Transporte Brasileiro",
       "title_en": "Volvo - Atlas of Accidents in Brazilian Transport",
+      "hex": "#EFEFEF",
       "heading": "<h2>Um projeto da Volvo com o objetivo de indicar as rodovias com os índices de acidentes em todo o Brasil.</h2>",
       "heading_en": "<h2>A Volvo's project with an objective of indicate a summary road accidents througout Brazil.</h2>",
-      "content": "<p>Um dos primeiros projetos em que atuei na agência <a href='https://www.aliensdesign.com.br/' target='_blank' rel='noopener noreferrer'>Aliens Design</a>, onde o desafio foi desenvolvedor toda a parte frontend do website do Grupo Volvo, o <strong>Atlas da Acidentalidade no Transporte Brasileiro</strong>.</p><p>Trabalhei com um time de desenvolvimento com o intuito de escrever o código dos componentes do site, e por fim juntá-los aplicando-os às páginas e montando o fluxo de navegação.</p><p>De acordo com a agência, o projeto é o mais completo material sobre acidentes rodoviários já publicado no Brasil. No site é possível fazer cruzamentos estatísticos de acidentes a partir de 2007 em diante, tendo atualizações anuais.</p><p>Esse estudo foi desenvolvido pelo programa <strong>Volvo de Segurança no Trânsito</strong>.</p>",
-      "content_en": "<p>This is a sample text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper vulputate faucibus. Nunc ac efficitur odio. Pellentesque at nisl sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce massa nibh, tempor nec dolor vitae, imperdiet sollicitudin nisl. Maecenas cursus id orci eu ornare. Sed vel posuere libero. Praesent posuere sem vitae pharetra lobortis. Etiam venenatis vehicula erat at semper. Donec id ullamcorper risus, ornare elementum mauris. Suspendisse non scelerisque ex. Aliquam fermentum, libero ac condimentum vulputate, ante lectus convallis turpis, sit amet finibus erat purus scelerisque elit. Cras gravida dui justo, a ultricies quam mollis in. Pellentesque interdum elit eget tellus posuere, at accumsan lorem mollis.</p><p>Morbi accumsan fringilla ipsum sed aliquet. Conteudo lorem ipsum dolor aqui</p>",
+      "content": "<p>Um dos primeiros projetos em que atuei na agência <a href='https://www.aliensdesign.com.br/' target='_blank' rel='noopener noreferrer'>Aliens Design</a>, onde o desafio foi desenvolver toda a parte frontend do website do Grupo Volvo, o <strong>Atlas da Acidentalidade no Transporte Brasileiro</strong>.</p><p>Trabalhei com um time de desenvolvimento com o intuito de escrever o código dos componentes do site, e por fim juntá-los aplicando-os às páginas e montando o fluxo de navegação.</p><p>De acordo com a agência, o projeto é o mais completo material sobre acidentes rodoviários já publicado no Brasil. No site é possível fazer cruzamentos estatísticos de acidentes a partir de 2007 em diante, tendo atualizações anuais.</p><p>Esse estudo foi desenvolvido pelo programa <strong>Volvo de Segurança no Trânsito</strong>.</p>",
+      "content_en": "<p>One of the first projects that I've worked at <a href='https://www.aliensdesign.com.br/' target='_blank' rel='noopener noreferrer'>Aliens Design</a> agency, in which the challenge was to develop all of the frontend part from the Volvo Group, the <strong>Atlas of Accidents in Brazilian Transport</strong>.</p><p>I've worked with a development team in order to write the components code of the site, and by the end joining them applying to the pages and then building the navigation flux.</p><p>According to agency, this project is the most complete material about road accidents ever published in Brazil. In this website it is possible to make statistic crossing accidents from 2007 and so on, getting anual updates.</p><p>This study was developed by <a href='https://pvst.com.br/' target='_blank' rel='noopener noreferrer'>Volvo de Segurança no Trânsito</a>.</p>",
       "description": "Projeto realizado pela Aliens Design, atuei como desenvolvedor na parte de codificação de alguns componentes e páginas do site.",
       "description_en": "Project made by Aliens Design. I acted as developer by building some pages and components of the site.",
-      "screenshot": ["/screenshots/volvo-full-page.png"]
+      "screenshot": [
+        "/screenshots/volvo-atlas-screenshot-1.png",
+        "/screenshots/volvo-atlas-screenshot-2.png"
+      ]
     },
     {
       "id": "2",
@@ -59,8 +64,9 @@
       "thumb": "/screenshots/voam-cover.png",
       "cover": "/screenshots/voam-cover.png",
       "hero": "/screenshots/voam-hero.png",
-      "title": "Voam - Volvo Odontologia e Assistência Médica",
-      "title_en": "Voam - Volvo Dentistry and Medical Assistance",
+      "title": "Volvo - Voam Odontologia e Assistência Médica",
+      "title_en": "Volvo - Voam Dentistry and Medical Assistance",
+      "hex": "#A0776A",
       "heading": "<h2>Plano de saúde para funcionários e dependentes da Volvo</h2>",
       "heading_en": "<h2>Healthy insurance to employees and dependants in Volvo</h2>",
       "content": "<p>Na agência <a href='https://www.aliensdesign.com.br/' target='_blank' rel='noopener noreferrer'>Aliens Design</a>, o Voam, plano de saúde da Volvo para funcionários e dependentes foi desenvolvido para servir de ferramenta e também institucional dos serviços prestados para seus colaboradores.</p><p>Trabalhei em conjunto com um excelente time de desenvolvimento e web design, com o propósito de entregar a melhor experiência e produto para uma das maiores empresas de referência em segurança no mundo.</p><p>Atuamos na parte de componentização do projeto, onde o layout era entregue de forma particionada e montávamos parte por parte, a fim de estruturar o website da melhor forma possível, obtendo performance e aplicando as melhores práticas da web para um desenvolvimento escalável e simples manutenção.</p><p>Foi usado o CMS próprio da <strong>Aliens Design</strong>, o que facilitava no gerenciamento de conteúdo do site.</p>",
@@ -74,27 +80,6 @@
     },
     {
       "id": "3",
-      "url": "tecnoeste-maquinas-equipamentos",
-      "path": "/tecnoeste-maquinas-equipamentos",
-      "tags": [
-        {
-          "item": "#frontend"
-        }
-      ],
-      "thumb": "/screenshots/tecnoeste-cover.png",
-      "cover": "/screenshots/tecnoeste-cover.png",
-      "title": "Tecnoeste Máquinas e Equipamentos Ltda.",
-      "title_en": "Tecnoeste Machinery and Equipment Ltd.",
-      "heading": "<h2>Lorem ipsum portugues</h2>",
-      "heading_en": "<h2>Lorem ipsum english</h2>",
-      "content": "<p>Esse é um texto de exemplo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper vulputate faucibus. Nunc ac efficitur odio. Pellentesque at nisl sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce massa nibh, tempor nec dolor vitae, imperdiet sollicitudin nisl. Maecenas cursus id orci eu ornare. Sed vel posuere libero. Praesent posuere sem vitae pharetra lobortis. Etiam venenatis vehicula erat at semper. Donec id ullamcorper risus, ornare elementum mauris. Suspendisse non scelerisque ex. Aliquam fermentum, libero ac condimentum vulputate, ante lectus convallis turpis, sit amet finibus erat purus scelerisque elit. Cras gravida dui justo, a ultricies quam mollis in. Pellentesque interdum elit eget tellus posuere, at accumsan lorem mollis.</p><p>Morbi accumsan fringilla ipsum sed aliquet. Conteudo lorem ipsum dolor aqui</p>",
-      "content_en": "<p>This is a sample text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque semper vulputate faucibus. Nunc ac efficitur odio. Pellentesque at nisl sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce massa nibh, tempor nec dolor vitae, imperdiet sollicitudin nisl. Maecenas cursus id orci eu ornare. Sed vel posuere libero. Praesent posuere sem vitae pharetra lobortis. Etiam venenatis vehicula erat at semper. Donec id ullamcorper risus, ornare elementum mauris. Suspendisse non scelerisque ex. Aliquam fermentum, libero ac condimentum vulputate, ante lectus convallis turpis, sit amet finibus erat purus scelerisque elit. Cras gravida dui justo, a ultricies quam mollis in. Pellentesque interdum elit eget tellus posuere, at accumsan lorem mollis.</p><p>Morbi accumsan fringilla ipsum sed aliquet. Conteudo lorem ipsum dolor aqui</p>",
-      "description": "Esse é um texto de exemplo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan fringilla ipsum sed aliquet...",
-      "description_en": "This is a sample text Esse é um texto de exemplo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi accumsan fringilla ipsum sed aliquet...",
-      "screenshot": "/screenshots/tecnoeste-full-page.png"
-    },
-    {
-      "id": "4",
       "url": "guandalini-sampaio-advogados",
       "path": "/guandalini-sampaio-advogados",
       "tags": [
@@ -107,6 +92,7 @@
       "hero": "/screenshots/guandalini-hero.png",
       "title": "Guandalini Sampaio Advogados",
       "title_en": "Guandalini Sampaio Lawyers",
+      "hex": "#242325",
       "heading": "<h2>Firma de advocacia em Curitiba</h2>",
       "heading_en": "<h2>Law firm at Curitiba</h2>",
       "content": "<p>Recebi a proposta de desenvolver um layout para uma firma de advocacia.<br>Foi um projeto bem curto e de rápida aplicação. Recebi apenas o logotipo e iniciei os trabalhos de pesquisa de cores, referências visuais e como poderia de forma rápida e simples explicar os conceitos de trabalho em apenas uma tela.</p><p>O layout foi desenvolvido com o intuito de servir de template para o <strong>WordPress</strong>, portanto as áreas já estavam pré-definidas em como deveria ser estruturado. Acabou sendo um caso de estudo para templates institucionais, o que achei bem interessante ao construir.</p><p>Nessa visão do layout temos apenas um <strong>Lorem Ipsum</strong> que nada mais é do que um 'teste' para textos no sentido comportamental, assim como também as imagens adicionadas ao site. Assim, já estavam pré-definidas as áreas que seriam aplicados os conteúdos dinâmicos do website.</p",

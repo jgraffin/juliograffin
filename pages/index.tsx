@@ -17,6 +17,7 @@ import Cover from "../public/images/background-image.jpeg";
 import Photo from "../public/julio-graffin.png";
 import Card from "../components/card";
 import content from "../frontaid.content.json";
+import { HiDocumentDownload } from "react-icons/hi";
 
 type Options = {
   playerVars: {};
@@ -59,15 +60,17 @@ const Home: NextPage = () => {
 
   const handleOpenModal = () => {
     setModalIsOpen(true);
-    if (language.currentLanguage === "pt-br") {
-      setVideoUrl(fm("screen.home.video"));
-    } else {
-      setVideoUrl(eng("screen.home.video"));
-    }
+    setVideoUrl(fm("screen.home.video"));
+
+    // if (language.currentLanguage === "pt-br") {
+    //   setVideoUrl(fm("screen.home.video"));
+    // } else {
+    //   setVideoUrl(eng("screen.home.video"));
+    // }
   };
 
   const opts: Options = {
-    playerVars: { autoplay: 0, controls: 0 },
+    playerVars: { autoplay: 0, controls: 0, subtitles: true },
   };
 
   return (
@@ -84,7 +87,11 @@ const Home: NextPage = () => {
           opts={opts}
         />
       </Modal>
-      <Section className="intro">
+      <Section
+        className={`intro ${
+          language.currentLanguage !== "pt-br" ? "is-hidden" : ""
+        }`}
+      >
         <Container>
           <div className="intro__text">
             <h1>
