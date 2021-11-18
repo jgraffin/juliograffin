@@ -265,12 +265,12 @@ export const Section = styled.section`
       }
     }
 
-    &.is-hidden {
+    /* &.is-hidden {
       .intro-button--video,
       .intro__video {
         visibility: hidden;
       }
-    }
+    } */
   }
 
   &.intro.intro--inner {
