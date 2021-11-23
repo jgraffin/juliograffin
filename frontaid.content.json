@@ -100,6 +100,29 @@
       "description": "Aceitei a proposta de desenvolver um layout para uma firma de advocacia. Foi um projeto bem curto e rápido.",
       "description_en": "I accepted a deal to develop a layout to a law firm. It was a very short and quick project.",
       "screenshot": ["/screenshots/guandalini-full-page.png"]
+    },
+    {
+      "id": "4",
+      "url": "rick-and-morty-api",
+      "path": "/rick-and-morty-api",
+      "tags": [
+        {
+          "item": "#studies"
+        }
+      ],
+      "thumb": "/screenshots/guandalini-cover.png",
+      "cover": "/screenshots/guandalini-cover.png",
+      "hero": "/screenshots/guandalini-hero.png",
+      "title": "API Rick and Morty",
+      "title_en": "Rick and Morty API",
+      "hex": "#242325",
+      "heading": "<h2>Estudando e aplicando a API Rick and Morty</h2>",
+      "heading_en": "<h2>Studing and applying Rick and Morty API</h2>",
+      "content": "<p></p",
+      "content_en": "<p>I accepted a deal to develop a layout to a law firm.<br> It was a very short and quick project. I got only the logo, then I started the job by making color researches, visual references and how I could do that in a simple and straightforward way to explain the work concepts at just one screen.</p><p>The layout was developed with an intention to serve as a <strong>WordPress</strong> template, hence the areas were already pre-defined in how to be structured. It turned out a study case for institutional template, in which I figured insteresting to build.</p><p>In this layout vision we have just a <strong>Lorem Ipsum</strong> in which is a 'test' for texts in behaviour sense, as well as the images added to the site. Thus, the areas that would be applied to the website's dynamic content were already pre-defined.</p",
+      "description": "Este foi um exercício que gostei muito de fazer, caso de estudo da API Ricky and Morty.",
+      "description_en": "I accepted a deal to develop a layout to a law firm. It was a very short and quick project.",
+      "screenshot": ["/screenshots/guandalini-full-page.png"]
     }
   ]
 }
