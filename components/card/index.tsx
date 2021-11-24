@@ -8,7 +8,7 @@ const Card = ({ path, slug, title, thumb, description, tags }: CardProps) => {
   return (
     <Article className="card-link">
       <Link href="[...slug]" as={path}>
-        <a>
+        <a aria-label={title}>
           <div>
             <HiPlusSm />
             <ul className="card-link__tags">

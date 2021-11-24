@@ -110,6 +110,11 @@ const Home: NextPage = () => {
             </p>
             <button
               className="intro-button intro-button--next"
+              aria-label={
+                language.currentLanguage === "pt-br"
+                  ? fm("button.scroll.down")
+                  : eng("button.scroll.down")
+              }
               onClick={(e) => {
                 let jobs = document.getElementById("jobs");
                 e.preventDefault();
