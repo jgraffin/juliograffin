@@ -106,6 +106,7 @@ export const ContentArea = styled.section`
     h2 {
       font-family: "jetbrains_mono_nlbold";
       font-size: 2rem;
+      margin-bottom: 1rem;
     }
   }
 `;
