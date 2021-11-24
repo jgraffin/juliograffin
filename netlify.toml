@@ -8,3 +8,6 @@
 [context.main.processing.css]
   bundle = true
   minify = true
+[context.main.processing.js]
+  bundle = true
+  minify = true
