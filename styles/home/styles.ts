@@ -96,15 +96,6 @@ export const Section = styled.section`
       );
     }
 
-    &::after {
-      animation: ${scaleIntro} ease-in-out;
-      animation-duration: 0.8s;
-      background: url("../../images/background-image.jpeg") no-repeat center
-        center;
-      background-size: cover;
-      z-index: 1;
-    }
-
     > div {
       display: flex;
       justify-content: space-between;
