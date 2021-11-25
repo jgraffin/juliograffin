@@ -467,6 +467,10 @@ export const Section = styled.section`
           position: relative;
           height: 64px;
           width: 64px;
+
+          img {
+            border-radius: 90px;
+          }
         }
 
         .author__text {
