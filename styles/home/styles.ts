@@ -27,6 +27,15 @@ const scaleIntro = keyframes`
     }
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 export const Section = styled.section`
   &.intro {
     overflow: hidden;
@@ -178,6 +187,19 @@ export const Section = styled.section`
       position: relative;
       margin: 0 auto;
       width: 80%;
+      border-radius: 12px;
+      overflow: hidden;
+
+      &.is-hidden {
+        opacity: 0;
+      }
+
+      &.is-shown {
+        animation-name: ${fadeIn};
+        animation-duration: 2s;
+        animation-delay: 5ms;
+        animation-fill-mode: forwards;
+      }
 
       @media (min-width: 661px) {
         width: 60%;
@@ -264,13 +286,6 @@ export const Section = styled.section`
         border-radius: 12px;
       }
     }
-
-    /* &.is-hidden {
-      .intro-button--video,
-      .intro__video {
-        visibility: hidden;
-      }
-    } */
   }
 
   &.intro.intro--inner {

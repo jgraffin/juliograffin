@@ -42,21 +42,33 @@ const Footer: FC = () => {
             <ul>
               <li>
                 <Link href="https://github.com/jgraffin" passHref>
-                  <a target="_blank" rel="noopener noreferrer">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Github"
+                  >
                     <AiOutlineGithub />
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="https://linkedin.com/in/juliograffin" passHref>
-                  <a target="_blank" rel="noopener noreferrer">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                  >
                     <FaLinkedin />
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="https://www.instagram.com/jotagraffin/" passHref>
-                  <a target="_blank" rel="noopener noreferrer">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
                     <GrInstagram />
                   </a>
                 </Link>

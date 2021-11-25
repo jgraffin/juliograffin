@@ -87,11 +87,7 @@ const Home: NextPage = () => {
           opts={opts}
         />
       </Modal>
-      <Section
-        className={`intro ${
-          language.currentLanguage !== "pt-br" ? "is-hidden" : ""
-        }`}
-      >
+      <Section className="intro">
         <Container>
           <div className="intro__text">
             <h1>
@@ -135,7 +131,10 @@ const Home: NextPage = () => {
               <span>0.53</span>
             </button>
           </div>
-          <div onClick={handleOpenModal} className="intro__video">
+          <div
+            onClick={handleOpenModal}
+            className={`intro__video ${!Cover ? "is-hidden" : "is-shown"}`}
+          >
             <BsPlayFill className="intro__video__icon" />
             <Image
               src={Cover}
