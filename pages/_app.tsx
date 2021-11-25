@@ -14,9 +14,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Julio Graffin - Ui / Front-end</title>
         <link rel="shortcut icon" href="/favicon.svg" />
+        <meta name="theme-color" content="#f1c40f" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta
           name="description"
