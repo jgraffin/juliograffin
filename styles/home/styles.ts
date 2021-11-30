@@ -360,11 +360,6 @@ export const Section = styled.section`
       display: flex;
       flex-wrap: wrap;
       background: rgb(241, 196, 15);
-      background: linear-gradient(
-        180deg,
-        rgba(241, 196, 15, 1) 86%,
-        rgba(255, 255, 255, 0) 100%
-      );
       padding: 2rem 15px 4rem 15px;
       width: 100%;
       position: relative;
@@ -376,7 +371,9 @@ export const Section = styled.section`
       }
 
       .content__jobs__title {
+        position: relative;
         width: 100%;
+        z-index: 2;
 
         @media (min-width: 769px) {
           padding-left: 1.5rem;
@@ -404,6 +401,17 @@ export const Section = styled.section`
           }
         }
       }
+
+      &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: red;
+        z-index: 1;
+      }
     }
 
     .content__jobs__cards {
@@ -411,6 +419,8 @@ export const Section = styled.section`
       grid-template-columns: 1fr;
       grid-gap: 3rem;
       width: 100%;
+      position: relative;
+      z-index: 2;
 
       @media (min-width: 550px) and (max-width: 768px) {
         grid-template-columns: 1fr 1fr;
