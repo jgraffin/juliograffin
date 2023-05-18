@@ -13,7 +13,7 @@ if (isGithubActions) {
 }
 
 module.exports = {
-    reactStrictMode: true,
+    reactStrictMode: false,
     assetPrefix: assetPrefix,
     basePath: basePath,
     images: {
