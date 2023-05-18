@@ -18,6 +18,6 @@ module.exports = {
     basePath: basePath,
     images: {
         loader: "imgix",
-        path: 'the "domain" of your Imigix source',
+        path: "https://juliograffin.imgix.net",
     },
 };
