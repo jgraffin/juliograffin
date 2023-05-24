@@ -7,8 +7,6 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "predeploy": "next build",
-        "deploy": "gh-pages -d out",
         "prod": "next export"
     },
     "dependencies": {
@@ -32,7 +30,6 @@
         "babel-preset-next": "^1.4.0",
         "eslint": "7.32.0",
         "eslint-config-next": "11.1.2",
-        "gh-pages": "^5.0.0",
         "typescript": "4.4.3"
     }
 }
